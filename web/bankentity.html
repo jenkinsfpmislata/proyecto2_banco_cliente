@@ -2,22 +2,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>your BANK</title>
-        <link href="css/style2.css" rel="stylesheet" type="text/css" /> 
         <link href="css/style.css" rel="stylesheet" type="text/css" /> 
+        <link href="css/style2.css" rel="stylesheet" type="text/css" /> 
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
         <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen" />
 
-        <link type="text/css" href="css/skitter.styles.css" media="all" rel="stylesheet" />
-	<script type="text/javascript" language="javascript" src="js/jquery-1.6.3.min.js"></script>
-	<script type="text/javascript" language="javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" language="javascript" src="js/jquery.animate-colors-min.js"></script>
-	<script type="text/javascript" language="javascript" src="js/jquery.skitter.min.js"></script>
-
-        <script type="text/javascript" language="javascript">
-            $(document).ready(function() {
-                $(".box_skitter_large").css({width: 820, height: 298}).skitter({numbers:false, animation:'random' });
-            });
-        </script>
+       
     </head>
     <body>
         <div id="topbar">
@@ -39,7 +29,7 @@
                     <div class="menu-left">
                         <h5>MENU</h5>
                         <ul>
-                            <a href="bankentity.html"<li>Bank Entity</li></a>
+                            <li><a href="bankentity.html">Bank Entity</a></li>
                             <li>Branch Office</li>
                             <li>Accounts</li>
                             <li>Companies</li>
@@ -66,34 +56,25 @@
                     </div>
                 </div>
                 <div id="column-right">
-                    <div id="containsSlider">
-                        <div class="box_skitter box_skitter_large">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="img/slider/001.jpg" /></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="img/slider/002.jpg"  /></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="img/slider/003.jpg"  /></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="containsDivLink">
-                        <div id="entity" class="divlink">
-                            <h4><a href="#">Banking Entity</a></h4>
-                            <p>All your banks entities in one click</p>
-                        </div>
-                        <div id="office" class="divlink">
-                            <h4><a href="#">Branch Office</a></h4>
-                            <p>Search the branch office near your home</p>
-                        </div>
-                        <div id="account" class="divlink">
-                            <h4><a href="#">Your Accounts</a></h4>
-                            <p>Manage your account easily</p>
-                        </div>
+                    <div>
+                        <table  class="table table-hover">
+                            <thead id="entidadestable">
+                                <tr>
+                                    <th><b>IdEntity</b></th><th><b>CodigoEntidad</b></th><th><b>NombreEntidad</b></th><th><b>CIF</b></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4665</td><td>7461</td><td>Seccion Horta Sud</td><td>B445557</td>
+                                </tr>   
+                                <tr>
+                                    <td>4565</td><td>8542</td><td>Seccion Horta Nord</td><td>B551848</td>
+                                </tr>
+                                <tr>
+                                    <td>7852</td><td>7413</td><td>Seccion Ribera</td><td>B985521</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
