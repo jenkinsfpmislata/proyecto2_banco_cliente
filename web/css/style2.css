@@ -15,10 +15,11 @@ a{
 
 a:visited{
     text-decoration: none;
-    color:#000;
+    
 }
 
 a:hover{}
+
 
 
 /* CSS - Selector ID */
@@ -104,7 +105,7 @@ a:hover{}
     margin: 5px;
 }
 
-#container #main #containertables{
+#container #main {
     width: 90%;
     margin: 0 auto 0 auto;        
 }
@@ -209,7 +210,7 @@ a:hover{}
     padding: 10px 0;
 }
 
-#entidadestable{
+#tabledatos{
     background-color: #333333;
     color: #FFF;
     font-weight: bold;
@@ -220,6 +221,12 @@ a:hover{}
     width: 90%;
     
 }
+#containertables{
+    width: 90%;
+    margin:20 auto;
+}
+
+
 
 
 /* CSS - Selector CLASS */
