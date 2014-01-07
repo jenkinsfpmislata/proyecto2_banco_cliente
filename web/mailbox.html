@@ -9,7 +9,7 @@
 
         <script src="js/jquery-2.0.3.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-
+        <script>$(".collapse").collapse();</script>
     </head>
     <body>
         <div id="topbar">
@@ -58,100 +58,96 @@
                     </div>
                 </div>
                 <div id="column-right">
-                    <h4>Administer Users</h4>
-                    <div id="newUser">
-                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">New user</button> 
+                    <h4>Mailbox</h4>
+                    <div id="messageNavBar">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#">Inbox</a></li>
+                            <li><a href="#">Outbox</a></li>                        
+                        </ul>
+                    </div>
+                    <div id="containsNewMessage">
+                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#newMessage"><span class="glyphicon glyphicon-plus"></span> New message</button> 
                     </div>
                     <div id="containsTable">
-                        <table class="table table-hover">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <td>Id</td><td>DNI</td><td>Name</td><td>Surnames</td><td>Birthday</td><td>Address</td><td>Phone</td><td>Edit</td>
+                                    <td class="col-xs-1">#</td><td class="col-xs-2">Date</td><td class="col-xs-2">Author</td><td class="col-xs-5">Subject</td><td class="col-xs-2">Options</td>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr data-toggle="collapse" data-target="#m1">
                                     <td>1</td>
-                                    <td>48587160M</td>
-                                    <td>Roberto</td>
-                                    <td>Hernando Ferrer</td>
-                                    <td>18/08/1989</td>
-                                    <td>C/ Manuel de Falla 4-1</td>
-                                    <td>666777888</td>
+                                    <td>18/12/13</td>
+                                    <td>Bankia</td>
+                                    <td>Tranferencia: Nomina Noviembre</td>
                                     <td>
-                                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
-                                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
-                                    </td> 
-                                <tr>
+                                        <button type="button" class="btn btn-default btn-sm" title="Reply"><span class="glyphicon glyphicon-share-alt"></span></button> 
+                                        <button type="button" class="btn btn-default btn-sm" title="Delete"><span class="glyphicon glyphicon-trash"></span></button> 
+                                    </td>                                     
+                                <tr id="m1" class="collapse">
+                                    <td colspan="5">
+                                        Texto de prueba
+                                    </td>
+                                </tr>
+                                <tr data-toggle="collapse" data-target="#m2">
                                     <td>2</td>
-                                    <td>55578160M</td>
-                                    <td>Manuel</td>
-                                    <td>Martinez Ferrer</td>
-                                    <td>28/10/1979</td>
-                                    <td>Av/ Valencia 4-1</td>
-                                    <td>667569858</td>
+                                    <td>18/10/13</td>
+                                    <td>Bankia</td>
+                                    <td>Bienvenido</td>
                                     <td>
-                                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
-                                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
+                                        <button type="button" class="btn btn-default btn-sm" title="Reply"><span class="glyphicon glyphicon-share-alt"></span></button> 
+                                        <button type="button" class="btn btn-default btn-sm" title="Delete"><span class="glyphicon glyphicon-trash"></span></button> 
                                     </td> 
+                                </tr>
+                                <tr id="m2" class="collapse">
+                                    <td colspan="5">                                        
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu dictum ipsum. Nam metus neque, 
+                                        congue in metus at, vehicula bibendum nulla. Sed dictum congue pretium. Ut eu cursus diam. 
+                                        Suspendisse ac enim elit. Morbi enim metus, tincidunt ac purus et, pulvinar cursus turpis. 
+                                        Vivamus dictum aliquam lorem at dignissim. Suspendisse lacus risus, egestas quis volutpat ut, 
+                                        cursus nec sapien. Morbi sed est elementum, lobortis massa non, adipiscing nulla. 
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="newMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">New user</h4>
+                                    <h4 class="modal-title" id="myModalLabel">New message</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <div id="containsEdit">
+                                    <div id="containsForm">
                                         <form role="form">
                                             <div class="row">
-                                                <div class="form-group col-xs-2">
-                                                    <label>Id</label>
-                                                    <input type="text" class="form-control" disabled>
-                                                </div>
-                                                <div class="form-group col-xs-5">
-                                                    <label>DNI</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row clear">
-                                                <div class="form-group col-xs-5">
-                                                    <label>Name</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group col-xs-6">
-                                                    <label>Surnames</label>
+                                                <div class="form-group col-xs-12">
+                                                    <label>Recipient</label>
                                                     <input type="text" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="form-group col-xs-10">
-                                                    <label>Address</label>
+                                                <div class="form-group col-xs-12">
+                                                    <label>Subject</label>
                                                     <input type="text" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="form-group col-xs-4">
-                                                    <label>Birthday</label>
-                                                    <input type="text" class="form-control">
+                                                <div class="form-group col-xs-12">
+                                                    <label>Message</label>
+                                                    <textarea class="form-control" rows="5"></textarea>
                                                 </div>
-                                                <div class="form-group col-xs-5">
-                                                    <label>Phone</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
+                                            </div>                                            
                                         </form>
                                     </div>    
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-success">Accept</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-success">Send</button>
                                 </div>
                             </div><!-- /.modal-content -->
                         </div><!-- /.modal-dialog -->

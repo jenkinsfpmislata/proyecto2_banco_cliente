@@ -47,7 +47,7 @@
     background-repeat: no-repeat;
 }
 
-#column-right #containsTable, #column-right #newUser{
+#column-right #containsTable, #column-right #newUser, #column-right #messageNavBar{
     margin: 15px auto;
     width: 90%;
 }
@@ -55,6 +55,11 @@
 #column-right #newUser button{
     position: relative;
     left: 90%;
+} 
+
+#column-right #containsNewMessage button{
+    position: relative;
+    left: 82%;
 } 
 
 #column-right #containsTable table{
@@ -67,9 +72,9 @@
     font-weight: bold;
 }
 
-#column-right #containsEdit{
+#column-right #containsForm{
     width: 95%;
-    margin: 15px auto;
+    margin: 0 auto;
 }
 
 #column-right h4{
