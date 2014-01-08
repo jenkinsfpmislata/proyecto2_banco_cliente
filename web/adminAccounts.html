@@ -58,38 +58,36 @@
                     </div>
                 </div>
                 <div id="column-right">
-                    <h4>Administer Users</h4>
+                    <h4>Administer Accounts</h4>
                     <div id="newUser">
-                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#formulario"><span class="glyphicon glyphicon-plus"></span> New user</button> 
+                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#formulario"><span class="glyphicon glyphicon-plus"></span> New account</button> 
                     </div>
                     <div id="containsTable">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <td>Id</td><td>DNI</td><td>Name</td><td>Surnames</td><td>Birthday</td><td>Address</td><td>Phone</td><td>Edit</td>
+                                    <td>#</td><td>Branch office</td><td>Account number</td><td>DC</td><td>Balance</td><td>CIF</td><td>Edit</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>48587160M</td>
-                                    <td>Roberto</td>
-                                    <td>Hernando Ferrer</td>
-                                    <td>18/08/1989</td>
-                                    <td>C/ Manuel de Falla 4-1</td>
-                                    <td>666777888</td>
+                                    <td>Bankia</td>
+                                    <td>11100254</td>
+                                    <td>22</td>
+                                    <td>+ 1529.25</td>
+                                    <td>E874848956</td>                                    
                                     <td>
                                         <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
                                         <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
                                     </td> 
                                 <tr>
                                     <td>2</td>
-                                    <td>55578160M</td>
-                                    <td>Manuel</td>
-                                    <td>Martinez Ferrer</td>
-                                    <td>28/10/1979</td>
-                                    <td>Av/ Valencia 4-1</td>
-                                    <td>667569858</td>
+                                    <td>Bankia</td>
+                                    <td>11541518</td>
+                                    <td>10</td>
+                                    <td>+ 0.89</td>
+                                    <td>C896596945</td>                                    
                                     <td>
                                         <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
                                         <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
@@ -105,44 +103,36 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">New user</h4>
+                                    <h4 class="modal-title" id="myModalLabel">New account</h4>
                                 </div>
                                 <div class="modal-body">
                                     <div id="containsForm">
                                         <form role="form">
                                             <div class="row">
                                                 <div class="form-group col-xs-2">
-                                                    <label>Id</label>
+                                                    <label>#</label>
                                                     <input type="text" class="form-control" disabled>
                                                 </div>
-                                                <div class="form-group col-xs-5">
-                                                    <label>DNI</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row">
                                                 <div class="form-group col-xs-6">
-                                                    <label>Name</label>
+                                                    <label>Branch office</label>
                                                     <input type="text" class="form-control">
                                                 </div>
-                                                <div class="form-group col-xs-6">
-                                                    <label>Surnames</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-group col-xs-12">
-                                                    <label>Address</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row">
                                                 <div class="form-group col-xs-4">
-                                                    <label>Birthday</label>
+                                                    <label>CIF</label>
                                                     <input type="text" class="form-control">
                                                 </div>
-                                                <div class="form-group col-xs-5">
-                                                    <label>Phone</label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-xs-6">
+                                                    <label>Account number</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group col-xs-2">
+                                                    <label>DC</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group col-xs-4">
+                                                    <label>Balance</label>
                                                     <input type="text" class="form-control">
                                                 </div>
                                             </div>
