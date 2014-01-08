@@ -47,6 +47,36 @@
     background-repeat: no-repeat;
 }
 
+#column-right #containsTable, #column-right #newUser, #column-right #messageNavBar{
+    margin: 15px auto;
+    width: 90%;
+}
+
+#column-right #newUser button{
+    position: relative;
+    left: 90%;
+} 
+
+#column-right #containsNewMessage button{
+    position: relative;
+    left: 82%;
+} 
+
+#column-right #containsTable table{
+    text-align: center;
+}
+
+#column-right #containsTable table thead{
+    background-color: #333;
+    color: #FFF;
+    font-weight: bold;
+}
+
+#column-right #containsForm{
+    width: 95%;
+    margin: 0 auto;
+}
+
 #column-right h4{
     margin: 20px 0px 5px 20px;
 }
