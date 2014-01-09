@@ -1,3 +1,3 @@
-app.controller("main",function($scope){
+app.controller("mainCtrl",function($scope){
     $scope.message="Adios Mundo!!";
 });

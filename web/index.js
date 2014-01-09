@@ -1,10 +1,15 @@
-var app = angular.module("app",["ngRoute"]);
+var app = angular.module("app", ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider.when("/",
             {
                 templateUrl: "main.html",
-                controller: "main"
+                controller: "mainCtrl"
+            });
+    $routeProvider.when("/Entity",
+            {
+                templateUrl: "Entity.html",
+                controller: "EntityCtrl"
             });
     $routeProvider.otherwise({
         redirectTo: "/"
