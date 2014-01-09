@@ -9,13 +9,6 @@
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-        <script>
-            $(function() {
-                $(document).tooltip({
-                    track: true
-                });
-            });
-        </script>
     </head>
     <body>
         <div id="topbar">
@@ -62,17 +55,23 @@
                             </form>
                         </div>
                     </div>
+                    <div class="menu-left">
+                        <h5>Administer</h5>
+                        <ul>
+                            <li><a href="adminPanel.html">Admin Panel</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div id="column-right">
                     <h4>Admin Panel</h4>
                     <div id="containsPanelAdmin">
-                        <a href="#" title="Usuario nuevo"><div id="newUser" class="optionPanelAdmin"></div></a>
-                        <div id="message" class="optionPanelAdmin"></div>   
+                        <a href="adminUsers.html" title="Administer users"><div id="adminUser" class="optionPanelAdmin"></div></a>
+                        <a href="mailbox.html" title="Administer messages"><div id="adminMessage" class="optionPanelAdmin"></div> </a>  
                         <div class="clear"></div>
-                        <div id="users" class="optionPanelAdmin"></div>
-                        <div id="entity" class="optionPanelAdmin"></div>
-                        <div id="office" class="optionPanelAdmin"></div>
-                        <div id="transaction" class="optionPanelAdmin"></div>
+                        <a href="#" title="Administer accounts"><div id="adminAccounts" class="optionPanelAdmin"></div></a>
+                        <a href="#" title="Administer entities"> <div id="adminEntity" class="optionPanelAdmin"></div></a>
+                        <a href="#" title="Administer branch offices"><div id="adminOffice" class="optionPanelAdmin"></div></a>
+                        <a href="#" title="Administer transactions"><div id="adminTransaction" class="optionPanelAdmin"></div></a>
                     </div>
                 </div>
             </div>

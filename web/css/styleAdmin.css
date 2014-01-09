@@ -5,42 +5,42 @@
     margin: 15px auto;    
 }
 
-#column-right #containsPanelAdmin #newUser{
-    background-image: url(../img/icon/priest.png);
+#column-right #containsPanelAdmin #adminUser{
+    background-image: url(../img/icon/users1.png);
     background-position: center;
-    background-size: 40px 45px;
+    background-size: 44px 45px;
     background-repeat: no-repeat;
 }
 
-#column-right #containsPanelAdmin #message{
+#column-right #containsPanelAdmin #adminMessage{
     background-image: url(../img/icon/message.png);
     background-position: center;
     background-size: 45px 45px;
     background-repeat: no-repeat;
 }
 
-#column-right #containsPanelAdmin #users{
-    background-image: url(../img/icon/users1.png);
+#column-right #containsPanelAdmin #adminAccounts{
+    background-image: url(../img/icon/portfolio3.png);
     background-position: center;
     background-size: 45px 45px;
     background-repeat: no-repeat;
 }
 
-#column-right #containsPanelAdmin #entity{
+#column-right #containsPanelAdmin #adminEntity{
     background-image: url(../img/icon/entity.png);
     background-position: center;
     background-size: 55px 55px;
     background-repeat: no-repeat;
 }
 
-#column-right #containsPanelAdmin #office{
+#column-right #containsPanelAdmin #adminOffice{
     background-image: url(../img/icon/office.png);
     background-position: center;
     background-size: 60px 60px;
     background-repeat: no-repeat;
 }
 
-#column-right #containsPanelAdmin #transaction{
+#column-right #containsPanelAdmin #adminTransaction{
     background-image: url(../img/icon/transaction.png);
     background-position: center;
     background-size: 50px 50px;
