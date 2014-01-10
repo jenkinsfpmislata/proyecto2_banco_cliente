@@ -1,5 +1,0 @@
-app.controller("AccountCtrl",function(){
-    
-});
-
-

@@ -1,175 +1,88 @@
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>your BANK</title>
-        <link href="css/styleAdmin.css" rel="stylesheet" type="text/css" /> 
-        <link href="css/style.css" rel="stylesheet" type="text/css" /> 
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
-        <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen" />
+<h4>Administer Accounts</h4>
+<div id="newUser">
+    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#formulario"><span class="glyphicon glyphicon-plus"></span> New account</button> 
+</div>
+<div id="containsTable">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>#</td><td>Branch office</td><td>Account number</td><td>DC</td><td>Balance</td><td>CTC</td><td>Edit</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Bankia</td>
+                <td>11100254</td>
+                <td>22</td>
+                <td>+ 1529.25</td>
+                <td>E874848956</td>                                    
+                <td>
+                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
+                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
+                </td> 
+            <tr>
+                <td>2</td>
+                <td>Bankia</td>
+                <td>11541518</td>
+                <td>10</td>
+                <td>+ 0.89</td>
+                <td>C896596945</td>                                    
+                <td>
+                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
+                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
+                </td> 
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-        <script src="js/jquery-2.0.3.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-
-    </head>
-    <body>
-        <div id="topbar">
-            <div id="logotopbar"></div>
-            <div id="menutopbar">
-                <ul>
-                    <a href="#" ><li id="homeTopBar"></li></a>
-                    <a href="#" ><li id="messageTopBar"></li></a>
-                    <a href="#" ><li id="exitTopBar"></li></a>
-                </ul>
+<!-- Modal -->
+<div class="modal fade" id="formulario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">New account</h4>
             </div>
-        </div>
-        <div id="container">
-            <div id="header">
-                <div id="logoheader"></div>
-            </div>
-            <div id="main">
-                <div id="column-left">
-                    <div class="menu-left">
-                        <h5>MENU</h5>
-                        <ul>
-                            <li><a href="Entity.html">Bank Entity</a></li>
-                            <li><a href="BranchOffice.html">Branch Office</a></li>
-                            <li><a href="Accounts.html">Accounts</a></li>
-                            <li>Companies</li>
-                            <li>Private</li>
-                        </ul>
-                    </div>
-                    <div class="menu-left">
-                        <h5>LOGIN</h5>
-                        <div id="containsLogin">                         
-                            <form role="form">
-                                <div class="form-group">
-                                    <label for="emailLogin">Email</label>
-                                    <input type="email" class="form-control" id="emailLogin"
-                                           placeholder="E-mail">
-                                </div>
-                                <div class="form-group">
-                                    <label for="passLogin">Pass:</label>
-                                    <input type="password" class="form-control" id="passLogin" 
-                                           placeholder="Password">
-                                </div>
-                                <button type="submit" class="btn btn-default">Enviar</button>
-                            </form>
+            <div class="modal-body">
+                <div id="containsForm">
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-xs-2">
+                                <label>#</label>
+                                <input type="text" class="form-control" disabled>
+                            </div>
+                            <div class="form-group col-xs-6">
+                                <label>Branch office</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-xs-4">
+                                <label>CIF</label>
+                                <input type="text" class="form-control">
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div id="column-right">
-                    <h4>Administer Accounts</h4>
-                    <div id="newUser">
-                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#formulario"><span class="glyphicon glyphicon-plus"></span> New account</button> 
-                    </div>
-                    <div id="containsTable">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <td>#</td><td>Branch office</td><td>Account number</td><td>DC</td><td>Balance</td><td>CTC</td><td>Edit</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Bankia</td>
-                                    <td>11100254</td>
-                                    <td>22</td>
-                                    <td>+ 1529.25</td>
-                                    <td>E874848956</td>                                    
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
-                                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
-                                    </td> 
-                                <tr>
-                                    <td>2</td>
-                                    <td>Bankia</td>
-                                    <td>11541518</td>
-                                    <td>10</td>
-                                    <td>+ 0.89</td>
-                                    <td>C896596945</td>                                    
-                                    <td>
-                                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
-                                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
-                                    </td> 
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="formulario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    <h4 class="modal-title" id="myModalLabel">New account</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div id="containsForm">
-                                        <form role="form">
-                                            <div class="row">
-                                                <div class="form-group col-xs-2">
-                                                    <label>#</label>
-                                                    <input type="text" class="form-control" disabled>
-                                                </div>
-                                                <div class="form-group col-xs-6">
-                                                    <label>Branch office</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group col-xs-4">
-                                                    <label>CIF</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-group col-xs-6">
-                                                    <label>Account number</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group col-xs-2">
-                                                    <label>DC</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group col-xs-4">
-                                                    <label>Balance</label>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>    
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-success">Accept</button>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
-                </div>
+                        <div class="row">
+                            <div class="form-group col-xs-6">
+                                <label>Account number</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-xs-2">
+                                <label>DC</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-xs-4">
+                                <label>Balance</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>    
             </div>
-            <div id="footer">
-                <div id="link-footer">
-                    <a href="#">Legal Terms</a>
-                    <a href="#">Security</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Rate</a>
-                </div>
-                <div id="icon-footer">
-                    <img class="icon-footer" src="img/icon/facebook24.png">
-                    <img class="icon-footer" src="img/icon/twitter14.png">
-                    <img class="icon-footer" src="img/icon/google17.png">
-                    <img class="icon-footer" src="img/icon/social68.png">
-
-                </div>
-                <div class="clear"></div>
-                <div id="copyright">
-                    <p>
-                        (c) your BANK 2013. Spain. All rights reserved.<br />
-                        Proyecto 2 - Banco
-                    </p>
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Accept</button>
             </div>
-        </div>
-    </body>
-</html>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
