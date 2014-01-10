@@ -17,24 +17,27 @@
         <script src="../lib/angularjs/js/angular.js" type="text/javascript"></script>
         <script src="../lib/angularjs/js/angular-route.js" type="text/javascript"></script>
         <!-- JS -->
-        <script src="index.js" type="text/javascript"></script>        
-        <script src="main.js" type="text/javascript"></script>
-        <script src="Entity.js" type="text/javascript"></script>
+        <script src="clientIndex.js" type="text/javascript"></script>        
+        <script src="clientMain.js" type="text/javascript"></script>
+
         <script src="Accounts.js" type="text/javascript"></script>
         <script src="BranchOffice.js" type="text/javascript"></script>
         <script src="Movements.js" type="text/javascript"></script>
-        <script src="adminAccounts.js" type="text/javascript"></script>
+        <script src="Deposit.js" type="text/javascript"></script>
+
 
         <!-- Fin Imports -->
-        
+
     </head>
     <body>
         <div id="topbar">
             <div id="logotopbar"></div>
             <div id="menutopbar">
                 <ul>
-                    <a href="#" ><li id="homeTopBar"></li></a>
-                    
+                    <a href="clientIndex.html" ><li id="homeTopBar"></li></a>
+                    <a href="#" ><li id="messageTopBar"></li></a>
+                    <a href="../Public/index.html" ><li id="exitTopBar"></li></a>
+
                 </ul>
             </div>
         </div>
@@ -47,34 +50,25 @@
                     <div class="menu-left">
                         <h5>MENU</h5>
                         <ul>
-                            <li><a href="#/Entity">Bank</a></li>
-                            <li><a href="#/BranchOffice">Branch Office</a></li>
                             <li><a href="#/Accounts">Accounts</a></li>
-                            
+                            <li><a href="#/BranchOffice">Your Office</a></li>
+                            <li><a href="#/Deposit">Direct Deposit</a></li>
+                            <li><a href="#/Movements">Movements</a></li>
+
                         </ul>
                     </div>
                     <div class="menu-left">
                         <h5>CLIENTS</h5>
                         <div id="containsLeft">                         
-                            <form role="form" action="clientIndex.html">
-                                <div class="form-group">
-                                    <label for="emailLogin">Email</label>
-                                    <input type="email" class="form-control" id="emailLogin"
-                                           placeholder="E-mail">
-                                </div>
-                                <div class="form-group">
-                                    <label for="passLogin">Pass:</label>
-                                    <input type="password" class="form-control" id="passLogin" 
-                                           placeholder="Password">
-                                </div>
-                              
-                                  <button type="submit" class="btn btn-default">Enviar</button>
-                                  
-                            </form>
+                            Name: Juanito
+                            <br>
+                            Surname:Tergal Martinez
+                            <br>
+                            DNI:B2145224
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
                 <div id="column-right">
 

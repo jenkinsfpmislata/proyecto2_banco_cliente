@@ -225,6 +225,10 @@ a:hover{}
     width: 90%;
     margin:20 auto;
 }
+#inicial{
+     position:relative;
+    float: left;
+}
 
 
 
