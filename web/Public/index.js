@@ -8,7 +8,7 @@ app.config(function($routeProvider) {
             });
     $routeProvider.when("/Entity",
             {
-                templateUrl: "Entity.html",
+                templateUrl: "EntityBank.html",
                 controller: "EntityCtrl"
             });
     $routeProvider.when("/BranchOffice",
