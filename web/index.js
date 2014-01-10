@@ -11,6 +11,21 @@ app.config(function($routeProvider) {
                 templateUrl: "Entity.html",
                 controller: "EntityCtrl"
             });
+    $routeProvider.when("/BranchOffice",
+            {
+                templateUrl: "BranchOffice.html",
+                controller: "BranchCtrl"
+            });
+    $routeProvider.when("/Accounts",
+            {
+                templateUrl: "Accounts.html",
+                controller: "AccountsCtrl"
+            });
+    $routeProvider.when("/Movements",
+            {
+                templateUrl: "Movements.html",
+                controller: "MovementsCtrl"
+            });
     $routeProvider.otherwise({
         redirectTo: "/"
     });
