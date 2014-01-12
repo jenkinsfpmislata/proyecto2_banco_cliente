@@ -1,5 +1,14 @@
 .clear{clear: both;}
 
+#column-right #loginWorker{
+    width: 400px;
+    margin: 120px auto;
+}
+
+#column-right #loginWorker #containsLeft form{
+    margin: 20px;
+}
+
 #column-right #containsPanelAdmin{
     width: 80%;
     margin: 15px auto;    
