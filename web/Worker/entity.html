@@ -10,25 +10,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Bankia</td>
-                <td>11100254</td>
-                <td>22</td>                                  
-                <td>
-                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
-                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
-                </td> 
-            <tr>
-                <td>2</td>
-                <td>Bankia</td>
-                <td>11541518</td>
-                <td>10</td>                                  
-                <td>
-                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
-                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
-                </td> 
+            <tr ng-repeat="entidad in entidadesBancarias">
+                <td>{{entidad.idEntidadBancaria}}</td>
+                <td>{{entidad.codigoEntidad}}</td>
+                <td>{{entidad.nombre}}</td> 
+                <td>{{entidad.cif}}</td> 
             </tr>
+            
         </tbody>
     </table>
 </div>
