@@ -25,10 +25,10 @@ app.config(function($routeProvider) {
                 templateUrl: "Movements.html",
                 controller: "MovementsCtrl"
             });
-    $routeProvider.when("/Admin/Accounts",
+    $routeProvider.when("/Account/New",
             {
-                templateUrl: "adminAccounts.html",
-                controller: "adminAccountsCtrl"
+                templateUrl: "accountsForm.html",
+                controller: "accountsForm"
             });
     $routeProvider.otherwise({
         redirectTo: "/"

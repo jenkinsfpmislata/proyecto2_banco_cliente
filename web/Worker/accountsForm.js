@@ -1,5 +1,5 @@
 app.controller("accountsFormCtrl",function(){
-    
+
 });
 
 
