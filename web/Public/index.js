@@ -16,9 +16,9 @@ app.config(function($routeProvider) {
                 templateUrl: "BranchOffice.html",
                 controller: "BranchCtrl"
             });
-    $routeProvider.when("/Accounts",
+    $routeProvider.when("/Account",
             {
-                templateUrl: "Accounts.html",
+                templateUrl: "Account.html",
                 controller: "AccountsCtrl"
             });
     $routeProvider.when("/Movements",
