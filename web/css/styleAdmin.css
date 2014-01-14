@@ -61,7 +61,7 @@
     width: 90%;
 }
 
-#column-right #newUser button{
+#column-right #newUser a{
     position: relative;
     left: 90%;
 } 
