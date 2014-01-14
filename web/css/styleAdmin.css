@@ -55,21 +55,25 @@
     background-size: 50px 50px;
     background-repeat: no-repeat;
 }
+#column-right #addSearch{
+    margin: 15px auto;
+    width: 90%;
+    height: 30px;
+}
 
-#column-right #containsTable, #column-right #newUser, #column-right #messageNavBar{
+#column-right #addSearch #search{
+    float: left;
+    width: 50%;
+}
+
+#column-right #addSearch #add{
+    float: right;
+}
+
+#column-right #containsTable, #column-right #messageNavBar{
     margin: 15px auto;
     width: 90%;
 }
-
-#column-right #newUser a{
-    position: relative;
-    left: 90%;
-} 
-
-#column-right #containsNewMessage button{
-    position: relative;
-    left: 82%;
-} 
 
 #column-right #containsTable table{
     text-align: center;
