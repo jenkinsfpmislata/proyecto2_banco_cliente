@@ -1,4 +1,4 @@
-app.controller("entitysearchCtrl",function($scope, $http){
+app.controller("entitySearchCtrl",function($scope, $http){
       $scope.entidad = null;
       $scope.entidadesBancarias = [];
       

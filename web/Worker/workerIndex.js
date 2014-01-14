@@ -18,7 +18,7 @@ app.config(function($routeProvider) {
     $routeProvider.when("/Entity",
             {
                 templateUrl: "entity.html",
-                controller: "entityCtrl"
+                controller: "entitySearchCtrl"
             });
     $routeProvider.when("/Movements",
             {
