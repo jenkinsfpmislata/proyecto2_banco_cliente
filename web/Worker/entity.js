@@ -4,7 +4,7 @@ app.controller("entitySearchCtrl", function($scope, $http) {
 
 
     $scope.readEntidades = function() {
-        $http.get("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria").success(function(result) {
+        $http.get("/proyecto2_bank_server/api/EntidadBancaria").success(function(result) {
             $scope.entidadesBancarias = result;
         });
     };
