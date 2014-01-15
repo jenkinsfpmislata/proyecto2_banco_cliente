@@ -25,7 +25,7 @@
                 <td>{{entidad.cifEntidadBancaria}}</td> 
                 <td>
                     <a type="button" class="btn btn-default btn-sm" href="#/Entity/Edit/{{entidad.idEntidadBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
-                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
+                    <button type="button" class="btn btn-default btn-sm" ng-click="deleteEntidadBancaria(entidad.idEntidadBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
                 </td>
             </tr>
 

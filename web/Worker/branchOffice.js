@@ -1,6 +1,6 @@
-app.controller("branchOfficeSearchCtrl",function(){
-    
-     $scope.sucursalesBancarias = [];
+app.controller("branchOfficeSearchCtrl", function($scope, $http) {
+    $scope.sucursal = null;
+    $scope.sucursalesBancarias = [];
 
 
     $scope.readSucursales = function() {
@@ -11,14 +11,14 @@ app.controller("branchOfficeSearchCtrl",function(){
     $scope.readSucursales();
 });
 
-app.controller("branchOfficEditEditCtrl", function($scope, $http,  $routeParams) {
+app.controller("branchOfficEditEditCtrl", function($scope, $http, $routeParams) {
     $scope.sucursalBancaria = null;
     $scope.title = "Edit";
-    
+
     $scope.params = $routeParams;
 
     $scope.readSucursalBancaria = function() {
-        $http.get("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/"+$scope.params.idSucursalBancaria).success(function(result) {
+        $http.get("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/" + $scope.params.idSucursalBancaria).success(function(result) {
             $scope.sucursalBancaria = result;
         });
     };

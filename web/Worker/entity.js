@@ -9,12 +9,19 @@ app.controller("entitySearchCtrl", function($scope, $http) {
         });
     };
     $scope.readEntidades();
+
+    $scope.deleteEntidadBancaria = function(idEntidadBancaria) {
+        $http.delete("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/" + idEntidadBancaria).success(function(result) {
+            $scope.readEntidades();
+        })
+    }
+
 });
 
 app.controller("entityEditCtrl", function($scope, $http, $routeParams) {
     $scope.entidadBancaria = null;
     $scope.title = "Edit";
-
+    $scope.action = "updateEntidadBancaria()";
     $scope.params = $routeParams;
 
     $scope.readEntidadBancaria = function() {
@@ -23,13 +30,25 @@ app.controller("entityEditCtrl", function($scope, $http, $routeParams) {
         });
     };
     $scope.readEntidadBancaria();
-    
+
     $scope.updateEntidadBancaria = function() {
-        $http.put("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/" 
-                + $scope.params.idEntidadBancaria,{"nombreEntidadBancaria":"VALENCIA"}).success(function(result) {
+        var entidadBancariaJSON = angular.toJson($scope.entidadBancaria);
+        $http.put("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/"
+                + $scope.params.idEntidadBancaria, entidadBancariaJSON).success(function(result) {
             $scope.entidadBancaria = result;
         });
-        
+
     };
+
+});
+
+app.controller("entityAddCtrl", function($scope, $http) {
+    $scope.entidadBancaria = null;
+    $scope.title = "Add";
+    $scope.action = "insertEntidadBancaria()";
+    
+    document.getElementById("idEntity").removeAttribute("disabled");
+
+
 
 });

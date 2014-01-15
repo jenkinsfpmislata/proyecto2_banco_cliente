@@ -13,7 +13,7 @@ app.config(function($routeProvider) {
     $routeProvider.when("/BranchOffice",
             {
                 templateUrl: "branchOffice.html",
-                controller: "branchOfficeCtrl"
+                controller: "branchOfficeSearchCtrl"
             });
     $routeProvider.when("/Entity",
             {
@@ -58,7 +58,7 @@ app.config(function($routeProvider) {
     $routeProvider.when("/Entity/Add",
             {
                 templateUrl: "entityForm.html",
-                controller: "entityForm"
+                controller: "entityAddCtrl"
             });
     $routeProvider.when("/Entity/Edit/:idEntidadBancaria",
             {
