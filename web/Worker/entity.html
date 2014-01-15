@@ -10,7 +10,7 @@
         <a class="btn btn-default btn-sm" href="#/Entity/Add"><span class="glyphicon glyphicon-plus"></span> Add</a> 
     </div>
 </div>
-<div id="containsTable" ng-init="readEntidades()">
+<div id="containsTable">
     <table class="table table-hover">
         <thead>
             <tr>
@@ -23,6 +23,10 @@
                 <td>{{entidad.codigoEntidadBancaria}}</td>
                 <td>{{entidad.nombreEntidadBancaria}}</td> 
                 <td>{{entidad.cifEntidadBancaria}}</td> 
+                <td>
+                    <a type="button" class="btn btn-default btn-sm" href="#/Entity/Edit/{{entidad.idEntidadBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
+                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
+                </td>
             </tr>
 
         </tbody>

@@ -40,7 +40,7 @@ app.config(function($routeProvider) {
                 templateUrl: "branchOfficeForm.html",
                 controller: "branchOfficeForm"
             });
-    $routeProvider.when("/BranchOffice/Edit",
+    $routeProvider.when("/BranchOffice/Edit/",
             {
                 templateUrl: "branchOfficeForm.html",
                 controller: "branchOfficeForm"
@@ -60,10 +60,10 @@ app.config(function($routeProvider) {
                 templateUrl: "entityForm.html",
                 controller: "entityForm"
             });
-    $routeProvider.when("/Entity/Edit",
+    $routeProvider.when("/Entity/Edit/:idEntidadBancaria",
             {
                 templateUrl: "entityForm.html",
-                controller: "entityForm"
+                controller: "entityEditCtrl"
             });
     $routeProvider.otherwise({
         redirectTo: "/"

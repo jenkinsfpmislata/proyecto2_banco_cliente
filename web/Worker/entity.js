@@ -8,7 +8,20 @@ app.controller("entitySearchCtrl", function($scope, $http) {
             $scope.entidadesBancarias = result;
         });
     };
-
+    $scope.readEntidades();
 });
 
+app.controller("entityEditCtrl", function($scope, $http,  $routeParams) {
+    $scope.entidadBancaria = null;
+    $scope.title = "Edit";
+    
+    $scope.params = $routeParams;
 
+    $scope.readEntidadBancaria = function() {
+        $http.get("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/"+$scope.params.idEntidadBancaria).success(function(result) {
+            $scope.entidadBancaria = result;
+        });
+    };
+    $scope.readEntidadBancaria();
+
+});
