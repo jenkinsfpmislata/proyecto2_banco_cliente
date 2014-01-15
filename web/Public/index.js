@@ -26,11 +26,6 @@ app.config(function($routeProvider) {
                 templateUrl: "Movements.html",
                 controller: "MovementsCtrl"
             });
-    $routeProvider.when("/Admin/Accounts",
-            {
-                templateUrl: "adminAccounts.html",
-                controller: "adminAccountsCtrl"
-            });
     $routeProvider.otherwise({
         redirectTo: "/"
     });

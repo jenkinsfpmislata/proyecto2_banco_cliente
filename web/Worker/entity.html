@@ -1,17 +1,16 @@
 <h4>Administer Entities</h4>
-
 <div id="addSearch">
     <div id="search" class="input-group input-group-sm">
-        <input type="text" class="form-control">
+        <input type="text" class="form-control" placeholder="Search by name">
         <span class="input-group-btn">
-            <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+            <button class="btn btn-default" ng-click="readEntidades()"><span class="glyphicon glyphicon-search"></span></button>
         </span>
     </div>
     <div id="add">
         <a class="btn btn-default btn-sm" href="#/Entity/Add"><span class="glyphicon glyphicon-plus"></span> Add</a> 
     </div>
 </div>
-<div id="containsTable">
+<div id="containsTable" ng-init="readEntidades()">
     <table class="table table-hover">
         <thead>
             <tr>
@@ -21,9 +20,9 @@
         <tbody>
             <tr ng-repeat="entidad in entidadesBancarias">
                 <td>{{entidad.idEntidadBancaria}}</td>
-                <td>{{entidad.codigoEntidad}}</td>
-                <td>{{entidad.nombre}}</td> 
-                <td>{{entidad.cif}}</td> 
+                <td>{{entidad.codigoEntidadBancaria}}</td>
+                <td>{{entidad.nombreEntidadBancaria}}</td> 
+                <td>{{entidad.cifEntidadBancaria}}</td> 
             </tr>
 
         </tbody>
