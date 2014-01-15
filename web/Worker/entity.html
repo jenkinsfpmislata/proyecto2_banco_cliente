@@ -1,6 +1,15 @@
 <h4>Administer Entities</h4>
-<div id="newUser">
-    <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-plus"></span>New entity</button> 
+
+<div id="addSearch">
+    <div id="search" class="input-group input-group-sm">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </span>
+    </div>
+    <div id="add">
+        <a class="btn btn-default btn-sm" href="#/Entity/Add"><span class="glyphicon glyphicon-plus"></span> Add</a> 
+    </div>
 </div>
 <div id="containsTable">
     <table class="table table-hover">
@@ -16,7 +25,7 @@
                 <td>{{entidad.nombre}}</td> 
                 <td>{{entidad.cif}}</td> 
             </tr>
-            
+
         </tbody>
     </table>
 </div>

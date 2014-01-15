@@ -22,13 +22,48 @@ app.config(function($routeProvider) {
             });
     $routeProvider.when("/Movements",
             {
-                templateUrl: "Movements.html",
-                controller: "MovementsCtrl"
+                templateUrl: "movements.html",
+                controller: "movementsCtrl"
             });
-    $routeProvider.when("/Account/New",
+    $routeProvider.when("/Accounts/Add",
             {
                 templateUrl: "accountsForm.html",
                 controller: "accountsForm"
+            });
+    $routeProvider.when("/Accounts/Edit",
+            {
+                templateUrl: "accountsForm.html",
+                controller: "accountsForm"
+            });
+    $routeProvider.when("/BranchOffice/Add",
+            {
+                templateUrl: "branchOfficeForm.html",
+                controller: "branchOfficeForm"
+            });
+    $routeProvider.when("/BranchOffice/Edit",
+            {
+                templateUrl: "branchOfficeForm.html",
+                controller: "branchOfficeForm"
+            });
+    $routeProvider.when("/Movements/Add",
+            {
+                templateUrl: "movementsForm.html",
+                controller: "movementsForm"
+            });
+    $routeProvider.when("/Movements/Edit",
+            {
+                templateUrl: "movementsForm.html",
+                controller: "movementsForm"
+            });
+    $routeProvider.when("/Entity/Add",
+            {
+                templateUrl: "entityForm.html",
+                controller: "entityForm"
+            });
+    $routeProvider.when("/Entity/Edit",
+            {
+                templateUrl: "entityForm.html",
+                controller: "entityForm"
             });
     $routeProvider.otherwise({
         redirectTo: "/"
