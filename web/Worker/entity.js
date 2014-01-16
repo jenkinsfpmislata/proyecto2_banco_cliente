@@ -4,16 +4,16 @@ app.controller("entitySearchDeleteCtrl", function($scope, $http) {
     $scope.nombreEntidadBancaria = null;
 
     $scope.readEntidades = function() {
-        var filter={
-            nombreEntidadBancaria:$scope.nombreEntidadBancaria
-        }
-        $http.get("/proyecto2_bank_server/api/EntidadBancaria",filter).success(function(result) {
-            
+        var filter = {
+            nombreEntidadBancaria: $scope.nombreEntidadBancaria
+        };
+        $http.get("/proyecto2_bank_server/api/EntidadBancaria", {params:filter}).success(function(result) {
+
             $scope.entidadesBancarias = result;
         });
-        
+
     };
-    
+
     $scope.deleteEntidadBancaria = function(idEntidadBancaria) {
         $http.delete("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/" + idEntidadBancaria).success(function(result) {
             $scope.readEntidades();
@@ -44,7 +44,7 @@ app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location
         });
         $location.path("/Entity");
     };
-    
+
     $scope.readEntidadBancaria();
     $scope.buttonOK = function() {
         $scope.updateEntidadBancaria();
@@ -55,13 +55,10 @@ app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location
 app.controller("entityAddCtrl", function($scope, $http, $location) {
     $scope.entidadBancaria = null;
     $scope.title = "Add";
- 
-
-
 
     $scope.insertEntidadBancaria = function() {
-        var entidadBancariaJSON = angular.toJson($scope.entidadBancaria);
-        $http.post("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/", entidadBancariaJSON).success(function(result) {
+
+        $http.post("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/", $scope.entidadBancaria).success(function(result) {
             $scope.entidadBancaria = result;
         });
         $location.path("/Entity");
