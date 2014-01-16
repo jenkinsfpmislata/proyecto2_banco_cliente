@@ -1,14 +1,13 @@
 app.controller("branchOfficeSearchDeleteCtrl", function($scope, $http) {
     $scope.sucursal = null;
     $scope.sucursalesBancarias = [];
-
+    $scope.nombreSucursalBancaria = null;
 
     $scope.readSucursales = function() {
         var filter = {
-            numeroSucursalBancaria: $scope.numeroSucursalBancaria
-        }
-
-        $http.get("/proyecto2_bank_server/api/SucursalBancaria",{params:filter}).success(function(result) {
+            nombreSucursalBancaria: $scope.nombreSucursalBancaria
+        };
+        $http.get("/proyecto2_bank_server/api/SucursalBancaria", {params: filter}).success(function(result) {
 
             $scope.sucursalesBancarias = result;
         });
