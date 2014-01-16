@@ -15,10 +15,15 @@ app.config(function($routeProvider) {
                 templateUrl: "branchOffice.html",
                 controller: "branchOfficeSearchCtrl"
             });
-    $routeProvider.when("/Entity",
+    $routeProvider.when("/Entity/",
             {
                 templateUrl: "entity.html",
-                controller: "entitySearchCtrl"
+                controller: "entitySearchDeleteCtrl"
+            });
+        $routeProvider.when("/Entity/:searchEntidadBancaria",
+            {
+                templateUrl: "entity.html",
+                controller: "entitySearchDeleteCtrl"
             });
     $routeProvider.when("/Movements",
             {

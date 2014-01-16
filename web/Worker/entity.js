@@ -1,10 +1,10 @@
-app.controller("entitySearchCtrl", function($scope, $http) {
+app.controller("entitySearchDeleteCtrl", function($scope, $http) {
     $scope.entidad = null;
     $scope.entidadesBancarias = [];
-
+    $scope.searchEntidadBancaria = null;
 
     $scope.readEntidades = function() {
-        $http.get("/proyecto2_bank_server/api/EntidadBancaria").success(function(result) {
+        $http.get("/proyecto2_bank_server/api/EntidadBancaria/"+$scope.searchEntidadBancaria).success(function(result) {
             $scope.entidadesBancarias = result;
         });
     };
@@ -21,7 +21,6 @@ app.controller("entitySearchCtrl", function($scope, $http) {
 app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location) {
     $scope.entidadBancaria = null;
     $scope.title = "Edit";
-    $scope.action = "updateEntidadBancaria()";
     $scope.params = $routeParams;
 
     document.getElementById("insert").style.display = "none";
@@ -47,7 +46,6 @@ app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location
 app.controller("entityAddCtrl", function($scope, $http, $location) {
     $scope.entidadBancaria = null;
     $scope.title = "Add";
-    $scope.action = "insertEntidadBancaria()";
 
     document.getElementById("idEntity").removeAttribute("disabled");
     document.getElementById("update").style.display = "none";
