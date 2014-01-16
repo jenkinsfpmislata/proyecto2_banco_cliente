@@ -7,7 +7,7 @@ app.controller("entitySearchDeleteCtrl", function($scope, $http) {
         var filter = {
             nombreEntidadBancaria: $scope.nombreEntidadBancaria
         };
-        $http.get("/proyecto2_bank_server/api/EntidadBancaria", {params:filter}).success(function(result) {
+        $http.get("/proyecto2_bank_server/api/EntidadBancaria", {params: filter}).success(function(result) {
 
             $scope.entidadesBancarias = result;
         });
@@ -15,7 +15,7 @@ app.controller("entitySearchDeleteCtrl", function($scope, $http) {
     };
 
     $scope.deleteEntidadBancaria = function(idEntidadBancaria) {
-        $http.delete("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/" + idEntidadBancaria).success(function(result) {
+        $http.delete("/proyecto2_bank_server/api/EntidadBancaria/" + idEntidadBancaria).success(function(result) {
             $scope.readEntidades();
         });
     };
@@ -31,14 +31,14 @@ app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location
 
 
     $scope.readEntidadBancaria = function() {
-        $http.get("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/" + $scope.params.idEntidadBancaria).success(function(result) {
+        $http.get("/proyecto2_bank_server/api/EntidadBancaria/" + $scope.params.idEntidadBancaria).success(function(result) {
             $scope.entidadBancaria = result;
         });
     };
 
 
     $scope.updateEntidadBancaria = function() {
-        $http.put("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/"
+        $http.put("/proyecto2_bank_server/api/EntidadBancaria/"
                 + $scope.params.idEntidadBancaria, $scope.entidadBancaria).success(function(result) {
             $scope.entidadBancaria = result;
         });
@@ -58,7 +58,7 @@ app.controller("entityAddCtrl", function($scope, $http, $location) {
 
     $scope.insertEntidadBancaria = function() {
 
-        $http.post("http://localhost:8084/proyecto2_bank_server/api/EntidadBancaria/", $scope.entidadBancaria).success(function(result) {
+        $http.post("/proyecto2_bank_server/api/EntidadBancaria/", $scope.entidadBancaria).success(function(result) {
             $scope.entidadBancaria = result;
         });
         $location.path("/Entity");

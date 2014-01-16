@@ -18,14 +18,14 @@
             </tr>
         </thead>
         <tbody>
-             <tr ng-repeat="sucursal in sucursalesBancarias">
+            <tr ng-repeat="sucursal in sucursalesBancarias">
                 <td>{{sucursal.idSucursalBancaria}}</td>
                 <td>{{sucursal.entidadBancaria}}</td>
                 <td>{{sucursal.codigoSucursalBancaria}}</td>
                 <td>{{sucursal.nombreSucursalBancaria}}</td> 
                 <td>
-                    <a type="button" class="btn btn-default btn-sm" href="#/branchOffice/Edit/{{sucursal.idSucursalBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
-                    <button type="button" class="btn btn-default btn-sm" ng-click="deleteSucursalBancaria(sucursal.idEntidadBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
+                    <a class="btn btn-default btn-sm" href="#/BranchOffice/Edit/{{sucursal.idSucursalBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
+                    <button type="button" class="btn btn-default btn-sm" ng-click="deleteSucursalBancaria(sucursal.idSucursalBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
                 </td> 
             </tr>
 
