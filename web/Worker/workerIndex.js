@@ -48,7 +48,7 @@ app.config(function($routeProvider) {
     $routeProvider.when("/BranchOffice/Edit/:idSucursalBancaria",
             {
                 templateUrl: "branchOfficeForm.html",
-                controller: "branchOfficeForm"
+                controller: "branchOfficeEditForm"
             });
     $routeProvider.when("/Movements/Add",
             {
