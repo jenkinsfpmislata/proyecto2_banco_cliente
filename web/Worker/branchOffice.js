@@ -7,18 +7,23 @@ app.controller("branchOfficeSearchDeleteCtrl", function($scope, $http) {
         var filter = {
             nombreEntidadBancaria: $scope.nombreEntidadBancaria
         }
-        $http.get("/proyecto2_bank_server/api/SucursalBancaria", filter).success(function(result) {
+
+        $http.get("/proyecto2_bank_server/api/SucursalBancaria",{params:filter}).success(function(result) {
+
             $scope.sucursalesBancarias = result;
         });
     };
 
+      $scope.deleteSucursalBancaria = function(idSucursalBancaria) {
+        $http.delete("/proyecto2_bank_server/api/SucursalBancaria/" + idSucursalBancaria).success(function(result) {
 
-    $scope.deleteSucursalBancaria = function(idSucursalBancaria) {
-        $http.delete("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/" + idSucursalBancaria).success(function(result) {
             $scope.readSucursales();
         });
     };
-    $scope.readSucursales();
+
+
+ $scope.readSucursales();
+
 });
 
 
@@ -29,7 +34,7 @@ app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams, $lo
 
 
     $scope.readSucursalBancaria = function() {
-        $http.get("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/" + $scope.params.idSucursalBancaria).success(function(result) {
+        $http.get("/proyecto2_bank_server/api/SucursalBancaria/" + $scope.params.idSucursalBancaria).success(function(result) {
             $scope.sucursalBancaria = result;
         });
     };
@@ -37,7 +42,7 @@ app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams, $lo
 
     $scope.updateSucursalBancaria = function() {
 
-        $http.put("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/"
+        $http.put("/proyecto2_bank_server/api/SucursalBancaria/"
                 + $scope.params.idSucursalBancaria, $scope.sucursalBancaria).success(function(result) {
             $scope.sucursalBancaria = result;
         });
@@ -55,11 +60,10 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location) {
     $scope.sucursalBancaria = null;
     $scope.title = "Add";
 
-
-
-
     $scope.insertSucursalBancaria = function() {
-        $http.post("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/", $scope.sucursalBancaria).success(function(result) {
+
+        $http.post("/proyecto2_bank_server/api/SucursalBancaria/", $scope.sucursalBancaria).success(function(result) {
+
             $scope.sucursalBancaria = result;
         });
         $location.path("/BranchOffice");

@@ -1,7 +1,7 @@
 <h4>Administer Branch Office</h4>
 <div id="addSearch">
     <div id="search" class="input-group input-group-sm">
-        <input type="text" class="form-control" placeholder="Search by name">
+        <input type="text" class="form-control" placeholder="Search by name" ng-model="nombreSucursalBancaria">
         <span class="input-group-btn">
             <button class="btn btn-default" ng-click="readSucursales()"><span class="glyphicon glyphicon-search"></span></button>
         </span>
@@ -10,7 +10,7 @@
         <a class="btn btn-default btn-sm" href="#/BranchOffice/Add"><span class="glyphicon glyphicon-plus"></span> Add</a> 
     </div>
 </div>
-<div id="containsTable" ng-init="readSucursales()">
+<div id="containsTable">
     <table class="table table-hover">
         <thead>
             <tr>
