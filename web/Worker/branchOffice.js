@@ -4,7 +4,10 @@ app.controller("branchOfficeSearchDeleteCtrl", function($scope, $http) {
 
 
     $scope.readSucursales = function() {
-        $http.get("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria").success(function(result) {
+          var filter={
+            nombreEntidadBancaria:$scope.nombreEntidadBancaria
+        }
+        $http.get("/proyecto2_bank_server/api/SucursalBancaria",filter).success(function(result) {
             $scope.sucursalesBancarias = result;
         });
     };
@@ -19,10 +22,9 @@ app.controller("branchOfficeSearchDeleteCtrl", function($scope, $http) {
 });
 
 
-app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams) {
+app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams, $location) {
     $scope.sucursalBancaria = null;
-    $scope.title = "Edit";
-    $scope.action = "updateSucursalBancaria()";
+    $scope.title = "Edit"; 
     $scope.params = $routeParams;
 
     document.getElementById("insert").style.display = "none";
@@ -35,12 +37,17 @@ app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams) {
     $scope.readSucursalBancaria();
     
      $scope.updateSucursalBancaria = function() {
-        var sucursalBancariaJSON = angular.toJson($scope.sucursalBancaria);
+
         $http.put("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/"
-                + $scope.params.idSucursalBancaria, sucursalBancariaJSON).success(function(result) {
+                + $scope.params.idSucursalBancaria, $scope.sucursalBancaria).success(function(result) {
             $scope.sucursalBancaria = result;
         });
         $location.path("/BranchOffice");
+    };
+    
+    $scope.readSucursalBancaria();
+    $scope.buttonOK = function() {
+        $scope.updateSucursalBancaria();
     };
 
 });
@@ -48,10 +55,9 @@ app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams) {
 app.controller("branchOfficeAddCtrl", function($scope, $http, $location) {
     $scope.sucursalBancaria = null;
     $scope.title = "Add";
-    $scope.action = "insertSucursalBancaria()";
+   
 
-    document.getElementById("idBranch").removeAttribute("disabled");
-    document.getElementById("update").style.display = "none";
+    
 
     $scope.insertSucursalBancaria = function() {
         var sucursalBancariaJSON = angular.toJson($scope.sucursalBancaria);
@@ -60,6 +66,11 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location) {
         });
         $location.path("/BranchOffice");
     };
+    
+    $scope.buttonOK = function() {
+        $scope.insertSucursalBancaria();
+    };
+
 
 });
 
