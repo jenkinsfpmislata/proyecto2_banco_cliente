@@ -1,4 +1,4 @@
-app.controller("branchOfficeSearchCtrl", function($scope, $http) {
+app.controller("branchOfficeSearchDeleteCtrl", function($scope, $http) {
     $scope.sucursal = null;
     $scope.sucursalesBancarias = [];
 
@@ -40,7 +40,7 @@ app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams) {
                 + $scope.params.idSucursalBancaria, sucursalBancariaJSON).success(function(result) {
             $scope.sucursalBancaria = result;
         });
-        $location.path("/branchOffice");
+        $location.path("/BranchOffice");
     };
 
 });
@@ -58,7 +58,7 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location) {
         $http.post("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/", sucursalBancariaJSON).success(function(result) {
             $scope.sucursalBancaria = result;
         });
-        $location.path("/branchOffice");
+        $location.path("/BranchOffice");
     };
 
 });
