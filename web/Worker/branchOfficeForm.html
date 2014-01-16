@@ -1,34 +1,27 @@
-<h4>Add Branch Office</h4>
+<h4>{{title}} Branch Office</h4>
 <div id="containsForm">
     <form role="form">
         <div class="row">
             <div class="form-group col-xs-2">
                 <label>#</label>
-                <input type="text" class="form-control" disabled>
+                <input id="idBranch" type="text" class="form-control" ng-model="sucursalBancaria.idSucursalBancaria" disabled>
             </div>
             <div class="form-group col-xs-6">
-                <label>Branch office</label>
-                <input type="text" class="form-control">
+                <label>Entity</label>
+                <input type="text" class="form-control" ng-model="sucursalBancaria.entidadBancaria" >
             </div>
-            <div class="form-group col-xs-4">
-                <label>CIF</label>
-                <input type="text" class="form-control">
-            </div>
+            
         </div>
         <div class="row">
+            <div class="form-group col-xs-4">
+                <label>Office Code</label>
+                <input type="text" class="form-control" ng-model="sucursalBancaria.codigoSucursalBancaria" >
+            </div>
             <div class="form-group col-xs-6">
                 <label>Account number</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" ng-model="sucursalBancaria.nombreSucursalBancaria">
             </div>
-            <div class="form-group col-xs-2">
-                <label>DC</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="form-group col-xs-4">
-                <label>Balance</label>
-                <input type="text" class="form-control">
-            </div>
-        </div>
+       
         <div class="row">
             <div class="form-group col-xs-12">
                 <button type="button" class="btn btn-warning col-xs-4">Cancel</button>
