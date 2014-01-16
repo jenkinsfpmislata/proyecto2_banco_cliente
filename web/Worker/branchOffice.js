@@ -5,20 +5,20 @@ app.controller("branchOfficeSearchDeleteCtrl", function($scope, $http) {
 
     $scope.readSucursales = function() {
           var filter={
-            nombreEntidadBancaria:$scope.nombreEntidadBancaria
+            nombreSucursalBancaria:$scope.nombreSucursalBancaria
         }
-        $http.get("/proyecto2_bank_server/api/SucursalBancaria",filter).success(function(result) {
+        $http.get("/proyecto2_bank_server/api/SucursalBancaria",{params:filter}).success(function(result) {
             $scope.sucursalesBancarias = result;
         });
     };
     $scope.readSucursales();
     
       $scope.deleteSucursalBancaria = function(idSucursalBancaria) {
-        $http.delete("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/" + idSucursalBancaria).success(function(result) {
+        $http.delete("/proyecto2_bank_server/api/SucursalBancaria/" + idSucursalBancaria).success(function(result) {
             $scope.readSucursales();
         });
     };
-
+ $scope.readSucursales();
 });
 
 
@@ -27,10 +27,10 @@ app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams, $lo
     $scope.title = "Edit"; 
     $scope.params = $routeParams;
 
-    document.getElementById("insert").style.display = "none";
+    
 
     $scope.readSucursalBancaria = function() {
-        $http.get("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/" + $scope.params.idSucursalBancaria).success(function(result) {
+        $http.get("/proyecto2_bank_server/api/SucursalBancaria/" + $scope.params.idSucursalBancaria).success(function(result) {
             $scope.sucursalBancaria = result;
         });
     };
@@ -38,7 +38,7 @@ app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams, $lo
     
      $scope.updateSucursalBancaria = function() {
 
-        $http.put("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/"
+        $http.put("/proyecto2_bank_server/api/SucursalBancaria/"
                 + $scope.params.idSucursalBancaria, $scope.sucursalBancaria).success(function(result) {
             $scope.sucursalBancaria = result;
         });
@@ -60,8 +60,8 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location) {
     
 
     $scope.insertSucursalBancaria = function() {
-        var sucursalBancariaJSON = angular.toJson($scope.sucursalBancaria);
-        $http.post("http://localhost:8084/proyecto2_bank_server/api/SucursalBancaria/", sucursalBancariaJSON).success(function(result) {
+        
+        $http.post("/proyecto2_bank_server/api/SucursalBancaria/", sucursalBancariaJSON).success(function(result) {
             $scope.sucursalBancaria = result;
         });
         $location.path("/BranchOffice");
