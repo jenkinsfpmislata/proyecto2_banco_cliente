@@ -38,12 +38,12 @@ app.config(function($routeProvider) {
     $routeProvider.when("/BranchOffice/Add/",
             {
                 templateUrl: "branchOfficeForm.html",
-                controller: "branchOfficeAddForm"
+                controller: "branchOfficeAddCtrl"
             });
     $routeProvider.when("/BranchOffice/Edit/:idSucursalBancaria",
             {
                 templateUrl: "branchOfficeForm.html",
-                controller: "branchOfficeEditForm"
+                controller: "branchOfficeEditCtrl"
             });
     $routeProvider.when("/Movements/Add",
             {

@@ -14,7 +14,7 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <td>#</td><td>Entity code</td><td>Entity name</td><td>CTC</td><td>Edit</td>
+                <td>#</td><td>Entity code</td><td>Entity name</td><td>CTC</td><td>Entity type</td><td>Edit</td>
             </tr>
         </thead>
         <tbody>
@@ -23,6 +23,7 @@
                 <td>{{entidad.codigoEntidadBancaria}}</td>
                 <td>{{entidad.nombreEntidadBancaria}}</td> 
                 <td>{{entidad.cifEntidadBancaria}}</td> 
+                <td>{{entidad.tipoEntidadBancaria}}</td>
                 <td>
                     <a type="button" class="btn btn-default btn-sm" href="#/Entity/Edit/{{entidad.idEntidadBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
                     <button type="button" class="btn btn-default btn-sm" ng-click="deleteEntidadBancaria(entidad.idEntidadBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
