@@ -5,7 +5,7 @@ app.controller("branchOfficeSearchDeleteCtrl", function($scope, $http) {
 
     $scope.readSucursales = function() {
         var filter = {
-            nombreEntidadBancaria: $scope.nombreEntidadBancaria
+            numeroSucursalBancaria: $scope.numeroSucursalBancaria
         }
 
         $http.get("/proyecto2_bank_server/api/SucursalBancaria",{params:filter}).success(function(result) {
