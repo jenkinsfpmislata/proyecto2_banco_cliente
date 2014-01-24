@@ -24,8 +24,8 @@
             </div>
             <div class="form-group col-xs-8">
                 <label>Entity type</label>
-                <select ng-model="entidadBancaria.tipoEntidadBancaria"  ng-options="tiposEntidadancaria.enumEntidadBancaria as tiposEntidadBancaria.nombre for entidadBancaria.tipoEntidadBancaria in tiposEntidadBancaria">
-                    <option value="">-- Elige tipo de entidad --</option>
+                <select class="form-control" ng-model="entidadBancaria.tipoEntidadBancaria"  ng-options="tipoEntidadBancaria.enumEntidadBancaria as tipoEntidadBancaria.nombre for tipoEntidadBancaria in tiposEntidadBancaria">
+                    <option value="">-- Select type --</option>
                 </select>
             </div>
         </div>

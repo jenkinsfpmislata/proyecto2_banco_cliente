@@ -25,6 +25,20 @@ app.controller("entitySearchDeleteCtrl", function($scope, $http) {
 });
 
 app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location) {
+     $scope.tiposEntidadBancaria = [{
+        enumEntidadBancaria: "BANCO",
+        nombre: "Bank"
+    }, {
+        enumEntidadBancaria: "CAJADEAHORRO",
+        nombre: "Savings bank"
+    }, {
+        enumEntidadBancaria: "COOPERATIVASDECREDITO",
+        nombre: "Cooperative Credit"     
+    }, {
+        enumEntidadBancaria: "ESTABLECIMIENTOSFINACIEROSDECREDITO",
+        nombre: "Credit institutions"
+    }];    
+    
     $scope.entidadBancaria = null;
     $scope.title = "Edit";
     $scope.params = $routeParams;
@@ -55,16 +69,16 @@ app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location
 app.controller("entityAddCtrl", function($scope, $http, $location) {
     $scope.tiposEntidadBancaria = [{
         enumEntidadBancaria: "BANCO",
-        nombre: "Banco"
+        nombre: "Bank"
     }, {
         enumEntidadBancaria: "CAJADEAHORRO",
-        nombre: "Caja de ahorro"
+        nombre: "Savings bank"
     }, {
         enumEntidadBancaria: "COOPERATIVASDECREDITO",
-        nombre: "Cooperativas de credito"     
+        nombre: "Cooperative Credit"     
     }, {
         enumEntidadBancaria: "ESTABLECIMIENTOSFINACIEROSDECREDITO",
-        nombre: "Establecimientos fincancieros de credito"
+        nombre: "Credit institutions"
     }];    
     
     $scope.entidadBancaria = {};
