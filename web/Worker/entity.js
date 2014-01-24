@@ -53,7 +53,22 @@ app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location
 });
 
 app.controller("entityAddCtrl", function($scope, $http, $location) {
-    $scope.entidadBancaria = null;
+    $scope.tiposEntidadBancaria = [{
+        enumEntidadBancaria: "BANCO",
+        nombre: "Banco"
+    }, {
+        enumEntidadBancaria: "CAJADEAHORRO",
+        nombre: "Caja de ahorro"
+    }, {
+        enumEntidadBancaria: "COOPERATIVASDECREDITO",
+        nombre: "Cooperativas de credito"     
+    }, {
+        enumEntidadBancaria: "ESTABLECIMIENTOSFINACIEROSDECREDITO",
+        nombre: "Establecimientos fincancieros de credito"
+    }];    
+    
+    $scope.entidadBancaria = {};
+    $scope.entidadBancaria.tipoEntidadBancaria = $scope.tiposEntidadBancaria[0].enumEntidadBancaria;
     $scope.title = "Add";
 
     $scope.insertEntidadBancaria = function() {
@@ -67,5 +82,5 @@ app.controller("entityAddCtrl", function($scope, $http, $location) {
     $scope.buttonOK = function() {
         $scope.insertEntidadBancaria();
     };
-
+    
 });
