@@ -1,21 +1,5 @@
 app.controller("entitySearchDeleteCtrl", function($scope, $http) {
 
-    $scope.tiposEntidadBancaria = [{
-            enumEntidadBancaria: "BANCO",
-            nombre: "Bank"
-        }, {
-            enumEntidadBancaria: "CAJADEAHORRO",
-            nombre: "Savings bank"
-        }, {
-            enumEntidadBancaria: "COOPERATIVASDECREDITO",
-            nombre: "Cooperative Credit"
-        }, {
-            enumEntidadBancaria: "ESTABLECIMIENTOSFINACIEROSDECREDITO",
-            nombre: "Credit institutions"
-        }];
-
-
-
     $scope.entidad = null;
     $scope.entidadesBancarias = [];
     $scope.nombreEntidadBancaria = null;
