@@ -1,18 +1,4 @@
 app.controller("entitySearchDeleteCtrl", function($scope, $http) {
-    $scope.tiposEntidadBancaria = [{
-            enumEntidadBancaria: "BANCO",
-            nombre: "Bank"
-        }, {
-            enumEntidadBancaria: "CAJADEAHORRO",
-            nombre: "Savings bank"
-        }, {
-            enumEntidadBancaria: "COOPERATIVASDECREDITO",
-            nombre: "Cooperative Credit"
-        }, {
-            enumEntidadBancaria: "ESTABLECIMIENTOSFINACIEROSDECREDITO",
-            nombre: "Credit institutions"
-        }];
-
     $scope.entidad = null;
     $scope.entidadesBancarias = [];
     $scope.nombreEntidadBancaria = null;
@@ -22,7 +8,7 @@ app.controller("entitySearchDeleteCtrl", function($scope, $http) {
             nombreEntidadBancaria: $scope.nombreEntidadBancaria
         };
         $http.get("/proyecto2_bank_server/api/EntidadBancaria", {params: filter}).success(function(result) {
-            $scope.entidadBancaria.tipoEntidadBancaria = $scope.tiposEntidadBancaria[0].enumEntidadBancaria;
+
             $scope.entidadesBancarias = result;
         });
 
@@ -39,20 +25,20 @@ app.controller("entitySearchDeleteCtrl", function($scope, $http) {
 });
 
 app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location) {
-    $scope.tiposEntidadBancaria = [{
-            enumEntidadBancaria: "BANCO",
-            nombre: "Bank"
-        }, {
-            enumEntidadBancaria: "CAJADEAHORRO",
-            nombre: "Savings bank"
-        }, {
-            enumEntidadBancaria: "COOPERATIVASDECREDITO",
-            nombre: "Cooperative Credit"
-        }, {
-            enumEntidadBancaria: "ESTABLECIMIENTOSFINACIEROSDECREDITO",
-            nombre: "Credit institutions"
-        }];
-
+     $scope.tiposEntidadBancaria = [{
+        enumEntidadBancaria: "BANCO",
+        nombre: "Bank"
+    }, {
+        enumEntidadBancaria: "CAJADEAHORRO",
+        nombre: "Savings bank"
+    }, {
+        enumEntidadBancaria: "COOPERATIVASDECREDITO",
+        nombre: "Cooperative Credit"     
+    }, {
+        enumEntidadBancaria: "ESTABLECIMIENTOSFINACIEROSDECREDITO",
+        nombre: "Credit institutions"
+    }];    
+    
     $scope.entidadBancaria = null;
     $scope.title = "Edit";
     $scope.params = $routeParams;
@@ -82,19 +68,19 @@ app.controller("entityEditCtrl", function($scope, $http, $routeParams, $location
 
 app.controller("entityAddCtrl", function($scope, $http, $location) {
     $scope.tiposEntidadBancaria = [{
-            enumEntidadBancaria: "BANCO",
-            nombre: "Bank"
-        }, {
-            enumEntidadBancaria: "CAJADEAHORRO",
-            nombre: "Savings bank"
-        }, {
-            enumEntidadBancaria: "COOPERATIVASDECREDITO",
-            nombre: "Cooperative Credit"
-        }, {
-            enumEntidadBancaria: "ESTABLECIMIENTOSFINACIEROSDECREDITO",
-            nombre: "Credit institutions"
-        }];
-
+        enumEntidadBancaria: "BANCO",
+        nombre: "Bank"
+    }, {
+        enumEntidadBancaria: "CAJADEAHORRO",
+        nombre: "Savings bank"
+    }, {
+        enumEntidadBancaria: "COOPERATIVASDECREDITO",
+        nombre: "Cooperative Credit"     
+    }, {
+        enumEntidadBancaria: "ESTABLECIMIENTOSFINACIEROSDECREDITO",
+        nombre: "Credit institutions"
+    }];    
+    
     $scope.entidadBancaria = {};
     $scope.entidadBancaria.tipoEntidadBancaria = $scope.tiposEntidadBancaria[0].enumEntidadBancaria;
     $scope.title = "Add";
@@ -110,5 +96,5 @@ app.controller("entityAddCtrl", function($scope, $http, $location) {
     $scope.buttonOK = function() {
         $scope.insertEntidadBancaria();
     };
-
+    
 });
