@@ -26,7 +26,6 @@ app.controller("entitySearchDeleteCtrl", function($scope, $http) {
             nombreEntidadBancaria: $scope.nombreEntidadBancaria
         };
         $http.get("/proyecto2_bank_server/api/EntidadBancaria", {params: filter}).success(function(result) {
-            $scope.entidadBancaria.tipoEntidadBancaria = $scope.tiposEntidadBancaria[0].enumEntidadBancaria;
             $scope.entidadesBancarias = result;
 
         });
