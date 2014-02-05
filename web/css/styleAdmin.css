@@ -94,6 +94,12 @@
     margin: 20px 0px 5px 20px;
 }
 
+#column-right h5{
+    margin: 20px 0px 5px 0px;
+    font-weight: bold;
+    color: #65B6EB;
+}
+
 .optionPanelAdmin{
     float: left;
     margin: 15px;

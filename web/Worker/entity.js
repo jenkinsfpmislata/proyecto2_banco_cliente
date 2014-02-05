@@ -100,3 +100,17 @@ app.controller("entityAddCtrl", function($scope, $http, $location) {
     };
 
 });
+
+app.controller("entityDetailsCtrl", function($scope, $http, $routeParams) {
+
+    $scope.entidadBancaria = null;
+    $scope.params = $routeParams;
+
+    $scope.readEntidadBancaria = function() {
+        $http.get("/proyecto2_bank_server/api/EntidadBancaria/" + $scope.params.idEntidadBancaria).success(function(result) {
+            $scope.entidadBancaria = result;
+        });
+    };
+
+    $scope.readEntidadBancaria();
+});
