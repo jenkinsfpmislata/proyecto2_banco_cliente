@@ -3,6 +3,7 @@ app.controller("entitySearchDeleteCtrl", function($scope, $http) {
     $scope.entidadesBancarias = [];
     $scope.nombreEntidadBancaria = null;
 
+
     $scope.readEntidades = function() {
         var filter = {
             nombreEntidadBancaria: $scope.nombreEntidadBancaria
