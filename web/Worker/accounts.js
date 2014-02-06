@@ -2,7 +2,7 @@ app.controller("accountsSearchDeleteCtrl", function($scope, $http) {
 
     $scope.cuenta = null;
     $scope.cuentasBancarias = [];
-    $scope.numeroCuentaBancaria = 0;
+    $scope.numeroCuentaBancaria;
 
     $scope.readCuentas = function() {
         var filter = {
