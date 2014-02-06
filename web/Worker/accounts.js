@@ -26,21 +26,21 @@ app.controller("accountsSearchDeleteCtrl", function($scope, $http) {
 });
 
 app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $location) {
-    $scope.cuentaBancaria = null;
+    $scope.cuenta = null;
     $scope.title = "Edit";
     $scope.params = $routeParams;
 
 
     $scope.readCuentas = function() {
         $http.get("/proyecto2_bank_server/api/CuentaBancaria/" + $scope.params.idCuentaBancaria).success(function(result) {
-            $scope.cuentaBancaria = result;
+            $scope.cuenta = result;
         });
     };
     $scope.updateCuentaBancaria = function() {
 
         $http.put("/proyecto2_bank_server/api/CuentaBancaria/"
-                + $scope.params.idCuentaBancaria, $scope.cuentaBancaria).success(function(result) {
-            $scope.cuentaBancaria = result;
+                + $scope.params.idCuentaBancaria, $scope.cuenta).success(function(result) {
+            $scope.cuenta = result;
         });
         $location.path("/Accounts");
     };
@@ -51,14 +51,14 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
 });
 
 app.controller("accountAddCtrl", function($scope, $http, $location) {
-    $scope.cuentaBancaria = null;
+    $scope.cuenta = null;
     $scope.title = "Add";
 
     $scope.insertCuentaBancaria = function() {
 
-        $http.post("/proyecto2_bank_server/api/CuentaBancaria/", $scope.cuentaBancaria).success(function(result) {
+        $http.post("/proyecto2_bank_server/api/CuentaBancaria/", $scope.cuenta).success(function(result) {
 
-            $scope.cuentaBancaria = result;
+            $scope.cuenta= result;
         });
         $location.path("/Accounts");
     };
@@ -71,14 +71,14 @@ app.controller("accountAddCtrl", function($scope, $http, $location) {
 });
 app.controller("accountDetailsCtrl", function($scope, $http, $routeParams) {
 
-    $scope.cuentaBancaria = null;
+    $scope.cuenta = null;
    
     $scope.cuentasBancarias = [];
     $scope.params = $routeParams;
 
     $scope.readCuentaBancaria = function() {
         $http.get("/proyecto2_bank_server/api/CuentaBancaria/" + $scope.params.idCuentaBancaria).success(function(result) {
-            $scope.cuentaBancaria = result;
+            $scope.cuenta = result;
         });
     };
 
