@@ -69,3 +69,21 @@ app.controller("accountAddCtrl", function($scope, $http, $location) {
 
 
 });
+app.controller("accountDetailsCtrl", function($scope, $http, $routeParams) {
+
+    $scope.cuentaBancaria = null;
+   
+    $scope.cuentasBancarias = [];
+    $scope.params = $routeParams;
+
+    $scope.readCuentaBancaria = function() {
+        $http.get("/proyecto2_bank_server/api/CuentaBancaria/" + $scope.params.idCuentaBancaria).success(function(result) {
+            $scope.cuentaBancaria = result;
+        });
+    };
+
+   
+
+    $scope.readCuentaBancaria();
+    
+});

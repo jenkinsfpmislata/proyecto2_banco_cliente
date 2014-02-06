@@ -28,12 +28,17 @@ app.config(function($routeProvider) {
     $routeProvider.when("/Accounts/Add",
             {
                 templateUrl: "accountsForm.html",
-                controller: "accountsForm"
+                controller: "accountAddCtrl"
             });
-    $routeProvider.when("/Accounts/Edit",
+    $routeProvider.when("/Accounts/Edit/:idCuentaBancaria",
             {
-                templateUrl: "accountsForm.html",
-                controller: "accountsForm"
+                templateUrl: "entityForm.html",
+                controller: "accountsEditCtrl"
+            });
+    $routeProvider.when("/Accounts/Details/:idCuentaBancaria",
+            {
+                templateUrl: "entityDetails.html",
+                controller: "accountDetailsCtrl"
             });
     $routeProvider.when("/BranchOffice/Add/",
             {

@@ -4,35 +4,35 @@
         <div class="row">
             <div class="form-group col-xs-2">
                 <label>#</label>
-                <input type="text" class="form-control" disabled>
+                <input type="text" class="form-control" ng-model="cuenta.idCuentaBancaria">
             </div>
             <div class="form-group col-xs-6">
                 <label>Branch office</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" ng-model="cuenta.sucursalBancaria">
             </div>
             <div class="form-group col-xs-4">
                 <label>CIF</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" ng-model="cuenta.cif">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-xs-6">
                 <label>Account number</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" ng-model="cuenta.numeroCuenta">
             </div>
             <div class="form-group col-xs-2">
                 <label>DC</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" ng-model="cuenta.dc">
             </div>
             <div class="form-group col-xs-4">
                 <label>Balance</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" ng-model="cuenta.saldo">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-xs-12">
-                <button type="button" class="btn btn-warning col-xs-4">Cancel</button>
-                <button type="button" class="btn btn-primary col-xs-4 col-xs-offset-4">Accept</button>
+                <a class="btn btn-warning col-xs-5" href="#/Accounts">Cancel</a>
+                <button type="button" class="btn btn-primary col-xs-4 col-xs-offset-4" ng-click="buttonOK()">Accept</button>
             </div>
         </div>
     </form>

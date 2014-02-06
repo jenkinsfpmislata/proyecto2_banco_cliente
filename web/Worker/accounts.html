@@ -26,8 +26,8 @@
                 <td>{{cuenta.saldo}}</td>
                 <td>{{cuenta.cif}}</td>
                 <td>
-                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
-                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
+                    <a type="button" class="btn btn-default btn-sm" href="#/Accounts/Edit/{{cuenta.idCuentaBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
+                    <button type="button" class="btn btn-default btn-sm" ng-click="deleteCuentasBancarias(cuenta.idCuentaBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
                 </td> 
            
         </tbody>
