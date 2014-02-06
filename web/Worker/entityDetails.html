@@ -9,31 +9,28 @@
         <div><span class="nombreDetalle">NAME:</span> {{entidadBancaria.nombreEntidadBancaria}}</div>
         <div><span class="nombreDetalle">CTC:</span> {{entidadBancaria.cifEntidadBancaria}}</div>
         <div ng-switch on="entidadBancaria.tipoEntidadBancaria"><span class="nombreDetalle">TYPE:</span> 
-            
-                <span ng-switch-when="BANCO">Bank</span>
-                <span ng-switch-when="CAJADEAHORRO">Savings bank</span>
-                <span ng-switch-when="COOPERATIVASDECREDITO">Cooperative Credit</span>
-                <span ng-switch-when="ESTABLECIMIENTOSFINACIEROSDECREDITO">Credit institutions</span>
-            
-            
+
+            <span ng-switch-when="BANCO">Bank</span>
+            <span ng-switch-when="CAJADEAHORRO">Savings bank</span>
+            <span ng-switch-when="COOPERATIVASDECREDITO">Cooperative Credit</span>
+            <span ng-switch-when="ESTABLECIMIENTOSFINACIEROSDECREDITO">Credit institutions</span>
+
+
         </div>
     </div>
     <div class="panel panel-info">
-        <div id="cabeceraTabla" class="panel-heading">Movements</div>
+        <div id="cabeceraTabla" class="panel-heading">Branch office</div>
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <td>#</td><td>Activity type</td><td>Amounts</td><td>Date</td><td>Balance</td><td>Concept</td>
+                    <td>#</td><td>Office code</td><td>Name</td>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>DEBE</td>
-                    <td>-100</td>
-                    <td>18/08/13</td>
-                    <td>+1100</td>
-                    <td>Transferencia: Nomina Octubre</td>                              
+                <tr ng-repeat="sucursalBancaria in sucursalesBancarias">
+                    <td>{{sucursalBancaria.idSucursalBancaria}}</td>
+                    <td>{{sucursalBancaria.codigoSucursalBancaria}}</td>
+                    <td>{{sucursalBancaria.nombreSucursalBancaria}}</td>                           
                 </tr>
             </tbody>
         </table>

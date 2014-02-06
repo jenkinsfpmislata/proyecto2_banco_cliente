@@ -104,6 +104,8 @@ app.controller("entityAddCtrl", function($scope, $http, $location) {
 app.controller("entityDetailsCtrl", function($scope, $http, $routeParams) {
 
     $scope.entidadBancaria = null;
+    $scope.sucursalBancaria = null;
+    $scope.sucursalesBancarias = [];
     $scope.params = $routeParams;
 
     $scope.readEntidadBancaria = function() {
@@ -112,5 +114,12 @@ app.controller("entityDetailsCtrl", function($scope, $http, $routeParams) {
         });
     };
 
+    $scope.readSucursalesBancarias = function() {
+        $http.get("/proyecto2_bank_server/api/EntidadBancaria/" + $scope.params.idEntidadBancaria + "/SucursalesBancarias").success(function(result) {
+            $scope.sucursalesBancarias = result;
+        });
+    };
+
     $scope.readEntidadBancaria();
+    $scope.readSucursalesBancarias();
 });
