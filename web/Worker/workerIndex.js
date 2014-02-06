@@ -65,6 +65,11 @@ app.config(function($routeProvider) {
                 templateUrl: "entityForm.html",
                 controller: "entityEditCtrl"
             });
+    $routeProvider.when("/Entity/Details/:idEntidadBancaria",
+            {
+                templateUrl: "entityDetails.html",
+                controller: "entityDetailsCtrl"
+            });
     $routeProvider.otherwise({
         redirectTo: "/"
     });
