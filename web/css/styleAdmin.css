@@ -91,7 +91,7 @@
     
 }
 
-#column-right #containsTable, #column-right #messageNavBar{
+#column-right #containsTable, #column-right #messageNavBar, #column-right #return{
     margin: 15px auto;
     width: 90%;
 }
@@ -121,6 +121,9 @@
     margin: 20px 0px 5px 20px;
 }
 
+#column-right #return a{
+    width: 100%;
+}
 
 .optionPanelAdmin{
     float: left;
