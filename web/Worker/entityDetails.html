@@ -3,13 +3,23 @@
 
 </div>
 <div id="containsTable">
-    ID: {{entidadBancaria.idEntidadBancaria}}
-    CODE: {{entidadBancaria.codigoEntidadBancaria}}
-    NAME{{entidadBancaria.nombreEntidadBancaria}}
-    CTC:{{entidadBancaria.cifEntidadBancaria}}
-    TYPE:{{entidadBancaria.tipoEntidadBancaria}}
+    <div id="details">
+        <div><span class="nombreDetalle">ID:</span> {{entidadBancaria.idEntidadBancaria}}</div>
+        <div><span class="nombreDetalle">CODE:</span> {{entidadBancaria.codigoEntidadBancaria}}</div>
+        <div><span class="nombreDetalle">NAME:</span> {{entidadBancaria.nombreEntidadBancaria}}</div>
+        <div><span class="nombreDetalle">CTC:</span> {{entidadBancaria.cifEntidadBancaria}}</div>
+        <div ng-switch on="entidadBancaria.tipoEntidadBancaria"><span class="nombreDetalle">TYPE:</span> 
+            
+                <span ng-switch-when="BANCO">Bank</span>
+                <span ng-switch-when="CAJADEAHORRO">Savings bank</span>
+                <span ng-switch-when="COOPERATIVASDECREDITO">Cooperative Credit</span>
+                <span ng-switch-when="ESTABLECIMIENTOSFINACIEROSDECREDITO">Credit institutions</span>
+            
+            
+        </div>
+    </div>
     <div class="panel panel-info">
-        <div class="panel-heading">Movements</div>
+        <div id="cabeceraTabla" class="panel-heading">Movements</div>
         <table class="table table-hover">
             <thead>
                 <tr>

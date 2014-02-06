@@ -23,7 +23,12 @@
                 <td>{{entidad.codigoEntidadBancaria}}</td>
                 <td>{{entidad.nombreEntidadBancaria}}</td> 
                 <td>{{entidad.cifEntidadBancaria}}</td> 
-                <td>{{entidad.tipoEntidadBancaria}}</td>
+                <td ng-switch on="entidad.tipoEntidadBancaria">
+                    <div ng-switch-when="BANCO">Bank</div>
+                    <div ng-switch-when="CAJADEAHORRO">Savings bank</div>
+                    <div ng-switch-when="COOPERATIVASDECREDITO">Cooperative Credit</div>
+                    <div ng-switch-when="ESTABLECIMIENTOSFINACIEROSDECREDITO">Credit institutions</div>
+                </td>
                 <td>
                     <a type="button" class="btn btn-default btn-sm" href="#/Entity/Edit/{{entidad.idEntidadBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
                     <button type="button" class="btn btn-default btn-sm" ng-click="deleteEntidadBancaria(entidad.idEntidadBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 

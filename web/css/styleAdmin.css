@@ -70,9 +70,35 @@
     float: right;
 }
 
+
+#column-right #details{
+    margin: 15px auto;
+    width: 90%;
+    height: 100px;
+    border-bottom: solid 1px #e7e7e7;
+}
+
+#column-right #details div{
+    width: 50%;
+    float: left;
+    
+}
+
+#column-right #details .nombreDetalle{
+    font-weight: bold;
+
+    
+}
+
 #column-right #containsTable, #column-right #messageNavBar{
     margin: 15px auto;
     width: 90%;
+}
+
+#column-right #containsTable #cabeceraTabla{
+    background-color: #66ccff;
+    color: #FFF;
+    font-weight: bold;
 }
 
 #column-right #containsTable table{
@@ -94,11 +120,6 @@
     margin: 20px 0px 5px 20px;
 }
 
-#column-right h5{
-    margin: 20px 0px 5px 0px;
-    font-weight: bold;
-    color: #65B6EB;
-}
 
 .optionPanelAdmin{
     float: left;
