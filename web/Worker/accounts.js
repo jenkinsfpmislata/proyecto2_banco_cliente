@@ -1,4 +1,4 @@
-app.controller("accountsSearchDeleteCtrl", function() {
+app.controller("accountsSearchDeleteCtrl", function($scope, $http) {
 
     $scope.cuenta = null;
     $scope.cuentasBancarias = [];
