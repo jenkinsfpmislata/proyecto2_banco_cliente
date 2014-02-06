@@ -37,7 +37,7 @@ app.config(function($routeProvider) {
             });
     $routeProvider.when("/Accounts/Details/:idCuentaBancaria",
             {
-                templateUrl: "entityDetails.html",
+                templateUrl: "accountDetails.html",
                 controller: "accountDetailsCtrl"
             });
     $routeProvider.when("/BranchOffice/Add/",
