@@ -8,7 +8,7 @@ app.config(function($routeProvider) {
     $routeProvider.when("/Accounts",
             {
                 templateUrl: "accounts.html",
-                controller: "accountsCtrl"
+                controller: "accountsSearchDeleteCtrl"
             });
     $routeProvider.when("/BranchOffice",
             {
