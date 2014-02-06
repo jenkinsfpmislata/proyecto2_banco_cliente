@@ -1,9 +1,9 @@
 <h4>Administer Accounts</h4>
 <div id="addSearch">
     <div id="search" class="input-group input-group-sm">
-        <input type="text" class="form-control" placeholder="Search by account number">
+        <input type="text" class="form-control" placeholder="Search by account number" ng-model="numeroCuentaBancaria">
         <span class="input-group-btn">
-            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+            <button class="btn btn-default" ng-click="readCuentas()"><span class="glyphicon glyphicon-search"></span></button>
         </span>
     </div>
     <div id="add">
@@ -18,29 +18,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Bankia</td>
-                <td>11100254</td>
-                <td>22</td>
-                <td>+ 1529.25</td>
-                <td>E874848956</td>                                    
+           <tr ng-repeat="cuenta in cuentasBancarias">
+                <td>{{cuenta.idCuentaBancaria}}</td>
+                <td>{{cuenta.sucursalBancaria}}</td>
+                <td>{{cuenta.numeroCuenta}}</td>
+                <td>{{cuenta.dc}}</td>
+                <td>{{cuenta.saldo}}</td>
+                <td>{{cuenta.cif}}</td>
                 <td>
                     <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
                     <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
                 </td> 
-            <tr>
-                <td>2</td>
-                <td>Bankia</td>
-                <td>11541518</td>
-                <td>10</td>
-                <td>+ 0.89</td>
-                <td>C896596945</td>                                    
-                <td>
-                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></button> 
-                    <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span></button> 
-                </td> 
-            </tr>
+           
         </tbody>
     </table>
 </div>

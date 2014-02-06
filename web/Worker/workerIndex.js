@@ -5,10 +5,10 @@ app.config(function($routeProvider) {
             {
                 templateUrl: "adminPanel.html"
             });
-    $routeProvider.when("/Accounts",
+    $routeProvider.when("/Accounts/",
             {
                 templateUrl: "accounts.html",
-                controller: "accountsCtrl"
+                controller: "accountsSearchDeleteCtrl"
             });
     $routeProvider.when("/BranchOffice",
             {
