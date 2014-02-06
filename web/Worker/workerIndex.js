@@ -32,7 +32,7 @@ app.config(function($routeProvider) {
             });
     $routeProvider.when("/Accounts/Edit/:idCuentaBancaria",
             {
-                templateUrl: "accountForm.html",
+                templateUrl: "accountsForm.html",
                 controller: "accountsEditCtrl"
             });
     $routeProvider.when("/Accounts/Details/:idCuentaBancaria",
