@@ -14,7 +14,7 @@ app.controller("movementsSearchCtrl",function($scope, $http){
         });
     };
     
-    
+    readMovimientos();
     
 });
 
