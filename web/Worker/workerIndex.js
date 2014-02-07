@@ -23,7 +23,12 @@ app.config(function($routeProvider) {
     $routeProvider.when("/Movements",
             {
                 templateUrl: "movements.html",
-                controller: "movementsCtrl"
+                controller: "movementsSearchCtrl"
+            });
+    $routeProvider.when("/Movements/Add",
+            {
+                templateUrl: "movementsForm.html",
+                controller: "movementsAddCtrl"
             });
     $routeProvider.when("/Accounts/Add",
             {
@@ -55,11 +60,7 @@ app.config(function($routeProvider) {
                 templateUrl: "movementsForm.html",
                 controller: "movementsForm"
             });
-    $routeProvider.when("/Movements/Edit",
-            {
-                templateUrl: "movementsForm.html",
-                controller: "movementsForm"
-            });
+   
     $routeProvider.when("/Entity/Add",
             {
                 templateUrl: "entityForm.html",

@@ -1,38 +1,39 @@
-<h4>Add movement</h4>
+<h4>{{title}} movement</h4>
 <div id="containsForm">
     <form role="form">
         <div class="row">
             <div class="form-group col-xs-2">
                 <label>#</label>
-                <input type="text" class="form-control" disabled>
+                <input type="text" class="form-control" ng-model="movement.idMovimientoBancario">
             </div>
             <div class="form-group col-xs-6">
-                <label>Branch office</label>
-                <input type="text" class="form-control">
+                <label>Activity type</label>
+                <input type="text" class="form-control" ng-model="movement.tipoMovimientoBancario">
             </div>
             <div class="form-group col-xs-4">
-                <label>CIF</label>
-                <input type="text" class="form-control">
+                <label>Amounts</label>
+                <input type="text" class="form-control" ng-model="movement.importe">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-xs-6">
-                <label>Account number</label>
-                <input type="text" class="form-control">
+                <label>Date</label>
+                <input type="text" class="form-control" ng-model="movement.fecha">
             </div>
             <div class="form-group col-xs-2">
-                <label>DC</label>
-                <input type="text" class="form-control">
+                <label>Balance</label>
+                <input type="text" class="form-control" ng-model="movement.saldoTotal">
             </div>
             <div class="form-group col-xs-4">
-                <label>Balance</label>
-                <input type="text" class="form-control">
+                <label>Concept</label>
+                <input type="text" class="form-control" ng-model="movement.concepto">
             </div>
+          
         </div>
         <div class="row">
             <div class="form-group col-xs-12">
-                <button type="button" class="btn btn-warning col-xs-4">Cancel</button>
-                <button type="button" class="btn btn-primary col-xs-4 col-xs-offset-4">Accept</button>
+                <a class="btn btn-warning col-xs-5" href="#/Movements">Cancel</a>
+                <button type="button" class="btn btn-primary col-xs-5 col-xs-offset-2" ng-click="buttonOK()">Accept</button>
             </div>
         </div>
     </form>
