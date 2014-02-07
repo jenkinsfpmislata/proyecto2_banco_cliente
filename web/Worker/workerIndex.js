@@ -20,7 +20,7 @@ app.config(function($routeProvider) {
                 templateUrl: "entity.html",
                 controller: "entitySearchDeleteCtrl"
             });
-    $routeProvider.when("/Movements",
+    $routeProvider.when("/Movements/",
             {
                 templateUrl: "movements.html",
                 controller: "movementsSearchCtrl"
