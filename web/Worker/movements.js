@@ -2,13 +2,13 @@ app.controller("movementsSearchCtrl",function($scope, $http){
    
    $scope.movement=null;
    $scope.movimientosBancarios = [];
-   $scope.conceptoMovimiento = null;
+   $scope.idMovimiento = null;
    
    $scope.readMovimientos = function() {
         var filter = {
-            conceptoMovimiento: $scope.conceptoMovimiento
+            idMovimiento: $scope.idMovimiento
         };
-        $http.get("/proyecto2_bank_server/api/MovimientoBancario/", {params: filter}).success(function(result) {
+        $http.get("/proyecto2_bank_server/api/MovimientoBancario", {params: filter}).success(function(result) {
 
             $scope.movimientosBancarios = result;
         });
