@@ -8,7 +8,7 @@ app.controller("movementsSearchCtrl",function($scope, $http){
         var filter = {
             conceptoMovimiento: $scope.conceptoMovimiento
         };
-        $http.get("/proyecto2_bank_server/api/MovimientoBancario/", {params: filter}).success(function(result) {
+        $http.get("/proyecto2_bank_server/api/MovimientoBancario", {params: filter}).success(function(result) {
 
             $scope.movimientosBancarios = result;
         });
