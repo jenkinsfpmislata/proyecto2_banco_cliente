@@ -10,7 +10,7 @@
                 <label>Entity</label>
                 <input type="text" class="form-control" >
             </div>
-            
+
         </div>
         <div class="row">
             <div class="form-group col-xs-4">
@@ -18,15 +18,16 @@
                 <input type="text" class="form-control" ng-model="sucursalBancaria.codigoSucursalBancaria" >
             </div>
             <div class="form-group col-xs-6">
-                    <label>Name</label>
+                <label>Name</label>
                 <input type="text" class="form-control" ng-model="sucursalBancaria.nombreSucursalBancaria">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-xs-12">
-                <button type="button" class="btn btn-warning col-xs-4" href="#/entityDetails">Cancel</button>
-                <button type="button" class="btn btn-primary col-xs-4" ng-click="buttonOK()">Accept</button>
-                <button type="button" class="btn btn-default col-xs-4" ng-click="deleteSucursalBancaria(sucursal.idSucursalBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
+                <button type="button" class="btn btn-warning col-xs-3" href="#/entityDetails">Cancel</button>
+                <button type="button" class="btn btn-danger col-xs-3 col-xs-offset-1" ng-click="deleteSucursalBancaria(sucursal.idSucursalBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
+                <button type="button" class="btn btn-primary col-xs-3 col-xs-offset-1" ng-click="buttonOK()">Accept</button>
+
             </div>
         </div>
     </form>
