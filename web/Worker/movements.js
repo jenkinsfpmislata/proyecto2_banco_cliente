@@ -1,21 +1,21 @@
-app.controller("movementsSearchCtrl",function($scope, $http){
-   
-   $scope.movement=null;
-   $scope.movimientosBancarios = [];
-   $scope.idMovimiento = null;
-   
-   $scope.readMovimientos = function() {
+app.controller("movementsSearchCtrl", function($scope, $http) {
+
+    $scope.movement = null;
+    $scope.movimientosBancarios = [];
+    $scope.conceptoMovimiento = null;
+
+    $scope.readMovimientos = function() {
         var filter = {
-            idMovimiento: $scope.idMovimiento
+            conceptoMovimiento: $scope.conceptoMovimiento
         };
         $http.get("/proyecto2_bank_server/api/MovimientoBancario", {params: filter}).success(function(result) {
 
             $scope.movimientosBancarios = result;
         });
     };
-    
+
     $scope.readMovimientos();
-    
+
 });
 
 app.controller("movementsAddCtrl", function($scope, $http, $location) {

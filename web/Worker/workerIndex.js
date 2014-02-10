@@ -54,13 +54,7 @@ app.config(function($routeProvider) {
             {
                 templateUrl: "branchOfficeForm.html",
                 controller: "branchOfficeEditCtrl"
-            });
-    $routeProvider.when("/Movements/Add",
-            {
-                templateUrl: "movementsForm.html",
-                controller: "movementsForm"
-            });
-   
+            });  
     $routeProvider.when("/Entity/Add",
             {
                 templateUrl: "entityForm.html",
