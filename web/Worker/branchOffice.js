@@ -65,7 +65,7 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location) {
 
             $scope.sucursalBancaria = result;
         });
-        $location.path("/BranchOffice");
+        $location.path("/entityDetails");
     };
 
     $scope.buttonOK = function() {
