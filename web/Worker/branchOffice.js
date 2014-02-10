@@ -45,7 +45,7 @@ app.controller("branchOfficeEditCtrl", function($scope, $http, $routeParams, $lo
                 + $scope.params.idSucursalBancaria, $scope.sucursalBancaria).success(function(result) {
             $scope.sucursalBancaria = result;
         });
-        $location.path("/BranchOffice");
+        $location.path("#/entityDetails");
     };
 
     $scope.readSucursalBancaria();
@@ -65,7 +65,7 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location) {
 
             $scope.sucursalBancaria = result;
         });
-        $location.path("/entityDetails");
+        $location.path("#/entityDetails");
     };
 
     $scope.buttonOK = function() {
