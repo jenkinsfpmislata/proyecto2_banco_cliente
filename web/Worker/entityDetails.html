@@ -18,20 +18,37 @@
 
         </div>
     </div>
+    <div id="addSearch">
+        <div id="search" class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="Search by name" ng-model="nombreSucursalBancaria">
+            <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="readSucursales()"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+        </div>
+        <div id="add">
+            <a class="btn btn-default btn-sm" href="#/BranchOffice/Add"><span class="glyphicon glyphicon-plus"></span> Add</a> 
+        </div>
+    </div>
     <div class="panel panel-info">
         <div id="cabeceraTabla" class="panel-heading">Branch office</div>
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <td>#</td><td>Office code</td><td>Name</td>
+                    <td>#</td><td>Entity</td><td>Office code</td><td>Name</td><td>Edit</td>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="sucursalBancaria in sucursalesBancarias">
-                    <td>{{sucursalBancaria.idSucursalBancaria}}</td>
-                    <td>{{sucursalBancaria.codigoSucursalBancaria}}</td>
-                    <td>{{sucursalBancaria.nombreSucursalBancaria}}</td>                           
+                <tr ng-repeat="sucursal in sucursalesBancarias">
+                    <td>{{sucursal.idSucursalBancaria}}</td>
+                    <td>{{sucursal.entidadBancaria}}</td>
+                    <td>{{sucursal.codigoSucursalBancaria}}</td>
+                    <td>{{sucursal.nombreSucursalBancaria}}</td> 
+                    <td>
+                        <a class="btn btn-default btn-sm" href="#/BranchOffice/Edit/{{sucursal.idSucursalBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
+                        <button type="button" class="btn btn-default btn-sm" ng-click="deleteSucursalBancaria(sucursal.idSucursalBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
+                    </td> 
                 </tr>
+
             </tbody>
         </table>
 
