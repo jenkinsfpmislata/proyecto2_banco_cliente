@@ -52,19 +52,32 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
 
 app.controller("accountAddCtrl", function($scope, $http, $location) {
     $scope.cuenta = null;
+    $scope.sucursalBancaria = null;
+    $scope.sucursalesBancarias = [];
+    $scope.idSucursalBancaria = null;
     $scope.title = "Add";
 
     $scope.insertCuentaBancaria = function() {
 
         $http.post("/proyecto2_bank_server/api/CuentaBancaria/", $scope.cuenta).success(function(result) {
 
-            $scope.cuenta= result;
+            $scope.cuenta = result;
         });
         $location.path("/Accounts");
     };
 
+    $scope.readSucursales = function() {
+        $http.get("/proyecto2_bank_server/api/SucursalBancaria").success(function(result) {
+            $scope.sucursalesBancarias = result;
+        });
+    };
+
     $scope.buttonOK = function() {
         $scope.insertCuentaBancaria();
+    };
+    
+     $scope.seleccionarSucursal = function(codigo) {
+        $scope.idSucursalBancaria = codigo;
     };
 
 
@@ -72,7 +85,7 @@ app.controller("accountAddCtrl", function($scope, $http, $location) {
 app.controller("accountDetailsCtrl", function($scope, $http, $routeParams) {
 
     $scope.cuenta = null;
-   
+
     $scope.cuentasBancarias = [];
     $scope.params = $routeParams;
 
@@ -82,8 +95,8 @@ app.controller("accountDetailsCtrl", function($scope, $http, $routeParams) {
         });
     };
 
-   
+
 
     $scope.readCuentaBancaria();
-    
+
 });

@@ -1,5 +1,10 @@
 .clear{clear: both;}
 
+input[type="text"]:disabled{
+    background-color:#dbe8eb;
+    cursor: default;
+}
+
 #column-right #loginWorker{
     width: 400px;
     margin: 120px auto;
