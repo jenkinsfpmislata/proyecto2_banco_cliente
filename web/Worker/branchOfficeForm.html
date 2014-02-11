@@ -2,22 +2,17 @@
 <div id="containsForm">
     <form role="form">
         <div class="row">
-            <div class="form-group col-xs-2">
-                <label>#</label>
-                <input id="idBranch" type="text" class="form-control" ng-model="sucursalBancaria.idSucursalBancaria">
-            </div>
-            <div class="form-group col-xs-6">
+            <div class="form-group col-xs-11">
                 <label>Entity</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" ng-model="entidadMostrar" disabled>
             </div>
-
         </div>
         <div class="row">
             <div class="form-group col-xs-4">
                 <label>Office Code</label>
                 <input type="text" class="form-control" ng-model="sucursalBancaria.codigoSucursalBancaria" >
             </div>
-            <div class="form-group col-xs-6">
+            <div class="form-group col-xs-7">
                 <label>Name</label>
                 <input type="text" class="form-control" ng-model="sucursalBancaria.nombreSucursalBancaria">
             </div>
