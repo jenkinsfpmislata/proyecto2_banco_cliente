@@ -64,8 +64,7 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location) {
     $scope.disabled = true;
     $scope.entidadMostrar = null;
     
-    $scope.entidadMostrar=$scope.sucursalBancaria.entidadBancaria.codigoEntidadBancaria +" - "+$scope.sucursalBancaria.entidadBancaria.nombreEntidadBancaria;
-    
+ 
     $scope.insertSucursalBancaria = function() {
 
         $http.post("/proyecto2_bank_server/api/SucursalBancaria/", $scope.sucursalBancaria).success(function(result) {

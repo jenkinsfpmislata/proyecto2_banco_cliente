@@ -45,7 +45,7 @@ app.config(function($routeProvider) {
                 templateUrl: "accountDetails.html",
                 controller: "accountDetailsCtrl"
             });
-    $routeProvider.when("/BranchOffice/Add/",
+    $routeProvider.when("/BranchOffice/Add/:idEntidadBancaria",
             {
                 templateUrl: "branchOfficeForm.html",
                 controller: "branchOfficeAddCtrl"
