@@ -20,7 +20,7 @@
         <tbody>
            <tr ng-repeat="cuenta in cuentasBancarias">
                 <td><a href="#/Accounts/Details/{{cuenta.idCuentaBancaria}}">{{cuenta.idCuentaBancaria}}</a></td>
-                <td>{{cuenta.sucursalBancaria}}</td>
+                <td>{{cuenta.sucursalBancaria.codigoSucursalBancaria }} - {{cuenta.sucursalBancaria.nombreSucursalBancaria}}</td>
                 <td>{{cuenta.numeroCuenta}}</td>
                 <td>{{cuenta.dc}}</td>
                 <td>{{cuenta.saldo}}</td>
