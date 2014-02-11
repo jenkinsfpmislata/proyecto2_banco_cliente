@@ -5,7 +5,7 @@
             <div class="form-group col-xs-7">
                 <label>Branch office</label>
                 <div class="input-group input-group-sm">
-                    <input type="text" class="form-control" ng-model="idSucursalBancaria" disabled>
+                    <input type="text" class="form-control" ng-model="sucursalMostrar" disabled>
                     <span class="input-group-btn">
                         <button class="btn btn-default" ng-click="readSucursales()" data-toggle="modal" data-target="#modalSucursales"><span class="glyphicon glyphicon-search"></span></button>
                     </span>
@@ -48,7 +48,7 @@
             </div>
             <div class="modal-body">
                 <table class="table">
-                        <tr ng-click="seleccionarSucursal(sucursalBancaria.codigoSucursalBancaria)" ng-repeat="sucursalBancaria in sucursalesBancarias">
+                        <tr ng-click="seleccionarSucursal(sucursalBancaria)" ng-repeat="sucursalBancaria in sucursalesBancarias"  data-dismiss="modal">
                         
                             <td>{{sucursalBancaria.codigoSucursalBancaria}}</td>
                             <td>{{sucursalBancaria.nombreSucursalBancaria}}</td> 

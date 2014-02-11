@@ -52,7 +52,8 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
 
 app.controller("accountAddCtrl", function($scope, $http, $location) {
     $scope.cuenta = null;
-    $scope.sucursalBancaria = null;
+    $scope.sucursalMostrar = null;
+    $scope.sucursalBancaria = [];
     $scope.sucursalesBancarias = [];
     $scope.idSucursalBancaria = null;
     $scope.title = "Add";
@@ -62,22 +63,28 @@ app.controller("accountAddCtrl", function($scope, $http, $location) {
         $http.post("/proyecto2_bank_server/api/CuentaBancaria/", $scope.cuenta).success(function(result) {
 
             $scope.cuenta = result;
+            $scope.cuenta.sucursalBancaria = $scope.idSucursalBancaria;
         });
         $location.path("/Accounts");
     };
-
+    
+    
+    // Seleccion de la Sucursal- MODAL
     $scope.readSucursales = function() {
         $http.get("/proyecto2_bank_server/api/SucursalBancaria").success(function(result) {
             $scope.sucursalesBancarias = result;
         });
     };
 
+    $scope.seleccionarSucursal = function(sucursal) {
+        $scope.idSucursalBancaria = sucursal.idSucursalBancaria;
+        $scope.sucursalMostrar = sucursal.codigoSucursalBancaria + " - " + sucursal.nombreSucursalBancaria;
+    };
+
+// Fin del MODAL
+
     $scope.buttonOK = function() {
         $scope.insertCuentaBancaria();
-    };
-    
-     $scope.seleccionarSucursal = function(codigo) {
-        $scope.idSucursalBancaria = codigo;
     };
 
 
