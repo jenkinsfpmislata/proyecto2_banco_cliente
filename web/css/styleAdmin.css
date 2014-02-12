@@ -87,13 +87,13 @@ input[type="text"]:disabled{
     width: 50%;
     float: left;
     margin-bottom: 3px;
-    
+
 }
 
 #column-right #details .nombreDetalle{
     font-weight: bold;
 
-    
+
 }
 
 #column-right #containsTable, #column-right #messageNavBar, #column-right #return{
@@ -129,6 +129,24 @@ input[type="text"]:disabled{
 #column-right #return a{
     width: 100%;
 }
+
+/* MODAL ADMIN */
+.modal-body table{
+    width: 100%;
+}
+.modal-body table tr{
+    height: 30px;
+    border-top: dotted 1px #66ccff;
+    border-bottom: dotted 1px #66ccff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-body table tr:hover{
+    background-color: #d9edf7;
+}
+
+/* ----------- */
 
 .optionPanelAdmin{
     float: left;
