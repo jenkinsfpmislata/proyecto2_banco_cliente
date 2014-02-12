@@ -29,7 +29,10 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
     $scope.cuenta = null;
     $scope.title = "Edit";
     $scope.params = $routeParams;
-
+    $scope.sucursalesBancarias =[];
+    $scope.idSucursalBancaria =null;
+    $scope.sucursalMostrar = null;
+    
 
     $scope.readCuentas = function() {
         $http.get("/proyecto2_bank_server/api/CuentaBancaria/" + $scope.params.idCuentaBancaria).success(function(result) {
