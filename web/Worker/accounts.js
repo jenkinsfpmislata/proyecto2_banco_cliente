@@ -113,7 +113,7 @@ app.controller("accountAddCtrl", function($scope, $http, $location) {
 app.controller("accountDetailsCtrl", function($scope, $http, $routeParams) {
 
     $scope.cuenta = null;
-
+    $scope.movimientosBancarios=[];
     $scope.cuentasBancarias = [];
     $scope.params = $routeParams;
 
@@ -122,9 +122,15 @@ app.controller("accountDetailsCtrl", function($scope, $http, $routeParams) {
             $scope.cuenta = result;
         });
     };
+    
+    $scope.readMovimientos =function(){
+        $http.get("/proyecto2_bank_server/api/CuentaBancaria/"+  $scope.params.idCuentaBancaria +"/MovimientoBancario").success(function(result) {
+            $scope.movimientosBancarios=[];
+        });
+    }
 
 
 
     $scope.readCuentaBancaria();
-
+    $scope.readMovimientos();
 });
