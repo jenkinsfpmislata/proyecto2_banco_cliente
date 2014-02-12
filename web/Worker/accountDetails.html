@@ -31,16 +31,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="sucursal in sucursalesBancarias">
-                    <td>{{sucursal.idSucursalBancaria}}</td>
-                    <td>{{sucursal.codigoSucursalBancaria}}</td>
-                    <td>{{sucursal.nombreSucursalBancaria}}</td> 
-                    <td>
-                        <a class="btn btn-default btn-sm" href="#/BranchOffice/Edit/{{sucursal.idSucursalBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
+                <tr ng-repeat="movement in movimientosBancarios">
+                    <td>{{movement.idMovimientoBancario}}</td>
+                    <td>{{movement.tipoMovimientoBancario}}</td> 
+                    <td>{{movement.importe}}</td>
+                    <td>{{movement.fecha}}</td>
+                    <td>{{movement.saldoTotal}}</td>
+                    <td>{{movement.concepto}}</td>
+                    <td>{{movement.cuentaBancaria}}</td>
 
-                    </td> 
                 </tr>
-
             </tbody>
         </table>
 
