@@ -59,11 +59,11 @@ app.controller("accountAddCtrl", function($scope, $http, $location) {
     $scope.title = "Add";
 
     $scope.insertCuentaBancaria = function() {
-
+        $scope.cuenta.sucursalBancaria = $scope.sucursalBancaria;
         $http.post("/proyecto2_bank_server/api/CuentaBancaria/", $scope.cuenta).success(function(result) {
 
             $scope.cuenta = result;
-            $scope.cuenta.sucursalBancaria = $scope.idSucursalBancaria;
+           
         });
         $location.path("/Accounts");
     };
@@ -77,7 +77,7 @@ app.controller("accountAddCtrl", function($scope, $http, $location) {
     };
 
     $scope.seleccionarSucursal = function(sucursal) {
-        $scope.idSucursalBancaria = sucursal.idSucursalBancaria;
+        $scope.sucursalBancaria = sucursal;
         $scope.sucursalMostrar = sucursal.codigoSucursalBancaria + " - " + sucursal.nombreSucursalBancaria;
     };
 

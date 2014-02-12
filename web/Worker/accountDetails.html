@@ -9,9 +9,42 @@
         <div><span class="nombreDetalle">ACCOUNT NUMBER:</span> {{cuenta.numeroCuenta}}</div>
         <div><span class="nombreDetalle">DC:</span> {{cuenta.dc}}</div>
         <div><span class="nombreDetalle">CTC:</span> {{cuenta.cif}}</div>
-       
+
     </div>
-  
+    <div id="addSearch">
+        <div id="search" class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="Search by name" ng-model="nombreSucursalBancaria">
+            <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="readSucursales()"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+        </div>
+        <div id="add">
+            <a class="btn btn-default btn-sm" href="#/BranchOffice/Add/{{entidadBancaria.idEntidadBancaria}}"><span class="glyphicon glyphicon-plus"></span> Add</a> 
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div id="cabeceraTabla" class="panel-heading">Movements</div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>Activity type</td><td>Amounts</td><td>Date</td><td>Balance</td><td>Concept</td><td>Edit</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="sucursal in sucursalesBancarias">
+                    <td>{{sucursal.idSucursalBancaria}}</td>
+                    <td>{{sucursal.codigoSucursalBancaria}}</td>
+                    <td>{{sucursal.nombreSucursalBancaria}}</td> 
+                    <td>
+                        <a class="btn btn-default btn-sm" href="#/BranchOffice/Edit/{{sucursal.idSucursalBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
+
+                    </td> 
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
     <div id="return">
         <a class="btn btn-warning col-xs-5" href="#/Accounts">Return</a>
     </div>
