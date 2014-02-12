@@ -131,19 +131,34 @@ input[type="text"]:disabled{
 }
 
 /* MODAL ADMIN */
+.modal-header, .modal-footer{
+    background-color: #333;
+    color: #FFF;
+}
+
+.modal-body{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
 .modal-body table{
     width: 100%;
 }
 .modal-body table tr{
-    height: 30px;
+    height: 40px;
     border-top: dotted 1px #66ccff;
     border-bottom: dotted 1px #66ccff;
     cursor: pointer;
     font-weight: bold;
+    
 }
 
 .modal-body table tr:hover{
     background-color: #d9edf7;
+}
+
+.modal-body table tr td{
+  padding-left: 5px;
 }
 
 /* ----------- */
