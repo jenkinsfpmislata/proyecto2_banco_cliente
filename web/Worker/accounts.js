@@ -45,6 +45,21 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
         $location.path("/Accounts");
     };
     $scope.readCuentas();
+    
+      // Seleccion de la Sucursal- MODAL
+    $scope.readSucursales = function() {
+        $http.get("/proyecto2_bank_server/api/SucursalBancaria").success(function(result) {
+            $scope.sucursalesBancarias = result;
+        });
+    };
+
+    $scope.seleccionarSucursal = function(sucursal) {
+        $scope.idSucursalBancaria = sucursal.idSucursalBancaria;
+        $scope.sucursalMostrar = sucursal.codigoSucursalBancaria + " - " + sucursal.nombreSucursalBancaria;
+    };
+
+// Fin del MODAL
+
     $scope.buttonOK = function() {
         $scope.updateCuentaBancaria();
     };
