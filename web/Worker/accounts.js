@@ -125,6 +125,7 @@ app.controller("accountDetailsCtrl", function($scope, $http, $routeParams) {
     
     $scope.readMovimientos =function(){
         $http.get("/proyecto2_bank_server/api/CuentaBancaria/"+  $scope.params.idCuentaBancaria +"/MovimientoBancario").success(function(result) {
+           alert($scope.movimientosBancarios)
             $scope.movimientosBancarios=[];
         });
     }
