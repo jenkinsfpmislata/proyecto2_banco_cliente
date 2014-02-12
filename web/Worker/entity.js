@@ -115,7 +115,7 @@ app.controller("entityDetailsCtrl", function($scope, $http, $routeParams) {
         });
     };
 
-   
+
 
     $scope.readSucursales = function() {
         var filter = {
@@ -129,5 +129,6 @@ app.controller("entityDetailsCtrl", function($scope, $http, $routeParams) {
 
 
     $scope.readSucursales();
-
+    $scope.readEntidadBancaria();
+    $scope.readSucursalesBancarias();
 });
