@@ -74,7 +74,7 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location, $routeP
         $http.post("/proyecto2_bank_server/api/SucursalBancaria/", $scope.sucursalBancaria).success(function(result) {
             $scope.sucursalBancaria = result;
         });
-        $location.path("#/entityDetails/");
+       $location.path("/Entity/Details/" + $scope.idEntidadBancaria);
     };
 
     $scope.buttonOK = function() {
@@ -90,6 +90,9 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location, $routeP
         });
     };
     $scope.readEntidad();
+    $scope.buttonCancel=function(){
+         $location.path("/Entity/Details/" + $scope.idEntidadBancaria);
+    }
 
 });
 
