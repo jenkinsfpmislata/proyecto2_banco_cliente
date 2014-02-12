@@ -29,18 +29,20 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
     $scope.cuenta = null;
     $scope.title = "Edit";
     $scope.params = $routeParams;
-    $scope.sucursalesBancarias =[];
-    $scope.idSucursalBancaria =null;
+    $scope.sucursalesBancarias = [];
+    $scope.sucursalBancaria = [];
     $scope.sucursalMostrar = null;
-    
+
 
     $scope.readCuentas = function() {
         $http.get("/proyecto2_bank_server/api/CuentaBancaria/" + $scope.params.idCuentaBancaria).success(function(result) {
             $scope.cuenta = result;
+            $scope.sucursalBancaria = $scope.cuenta.sucursalBancaria;
+            $scope.sucursalMostrar = $scope.cuenta.sucursalBancaria.codigoSucursalBancaria+" - "+ $scope.cuenta.sucursalBancaria.nombreSucursalBancaria;
         });
     };
     $scope.updateCuentaBancaria = function() {
-
+        $scope.cuenta.sucursalBancaria = $scope.sucursalBancaria;
         $http.put("/proyecto2_bank_server/api/CuentaBancaria/"
                 + $scope.params.idCuentaBancaria, $scope.cuenta).success(function(result) {
             $scope.cuenta = result;
@@ -48,8 +50,8 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
         $location.path("/Accounts");
     };
     $scope.readCuentas();
-    
-      // Seleccion de la Sucursal- MODAL
+
+    // Seleccion de la Sucursal- MODAL
     $scope.readSucursales = function() {
         $http.get("/proyecto2_bank_server/api/SucursalBancaria").success(function(result) {
             $scope.sucursalesBancarias = result;
@@ -57,7 +59,8 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
     };
 
     $scope.seleccionarSucursal = function(sucursal) {
-        $scope.idSucursalBancaria = sucursal.idSucursalBancaria;
+        
+        $scope.sucursalBancaria = sucursal;
         $scope.sucursalMostrar = sucursal.codigoSucursalBancaria + " - " + sucursal.nombreSucursalBancaria;
     };
 
@@ -81,12 +84,12 @@ app.controller("accountAddCtrl", function($scope, $http, $location) {
         $http.post("/proyecto2_bank_server/api/CuentaBancaria/", $scope.cuenta).success(function(result) {
 
             $scope.cuenta = result;
-           
+
         });
         $location.path("/Accounts");
     };
-    
-    
+
+
     // Seleccion de la Sucursal- MODAL
     $scope.readSucursales = function() {
         $http.get("/proyecto2_bank_server/api/SucursalBancaria").success(function(result) {
