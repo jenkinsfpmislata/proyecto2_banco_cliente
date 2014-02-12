@@ -84,10 +84,11 @@ app.controller("branchOfficeAddCtrl", function($scope, $http, $location, $routeP
 
         $http.get("/proyecto2_bank_server/api/EntidadBancaria/" + $scope.params.idEntidadBancaria).success(function(result) {
             $scope.entidadBancaria = result;
+            alert($scope.entidadBancaria);
             $scope.entidadMostrar = $scope.entidadBancaria.codigoEntidadBancaria+"-"+$scope.entidadBancaria.nombreEntidadBancaria;
         });
     };
-
+    $scope.readEntidad();
 
 });
 
