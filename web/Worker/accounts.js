@@ -38,7 +38,7 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
         $http.get("/proyecto2_bank_server/api/CuentaBancaria/" + $scope.params.idCuentaBancaria).success(function(result) {
             $scope.cuenta = result;
             $scope.sucursalBancaria = $scope.cuenta.sucursalBancaria;
-            $scope.sucursalMostrar = $scope.cuenta.sucursalBancaria.codigoSucursalBancaria+" - "+ $scope.cuenta.sucursalBancaria.nombreSucursalBancaria;
+            $scope.sucursalMostrar = $scope.cuenta.sucursalBancaria.codigoSucursalBancaria + " - " + $scope.cuenta.sucursalBancaria.nombreSucursalBancaria;
         });
     };
     $scope.updateCuentaBancaria = function() {
@@ -59,7 +59,7 @@ app.controller("accountsEditCtrl", function($scope, $http, $routeParams, $locati
     };
 
     $scope.seleccionarSucursal = function(sucursal) {
-        
+
         $scope.sucursalBancaria = sucursal;
         $scope.sucursalMostrar = sucursal.codigoSucursalBancaria + " - " + sucursal.nombreSucursalBancaria;
     };
@@ -113,7 +113,8 @@ app.controller("accountAddCtrl", function($scope, $http, $location) {
 app.controller("accountDetailsCtrl", function($scope, $http, $routeParams) {
 
     $scope.cuenta = null;
-    $scope.movimientosBancarios=[];
+    $scope.movimientoBancario = null;
+    $scope.movimientosBancarios = [];
     $scope.cuentasBancarias = [];
     $scope.params = $routeParams;
 
@@ -122,13 +123,12 @@ app.controller("accountDetailsCtrl", function($scope, $http, $routeParams) {
             $scope.cuenta = result;
         });
     };
-    
-    $scope.readMovimientos =function(){
-        $http.get("/proyecto2_bank_server/api/CuentaBancaria/"+  $scope.params.idCuentaBancaria +"/MovimientoBancario").success(function(result) {
-           
-            $scope.movimientosBancarios=[];
+
+    $scope.readMovimientos = function() {
+        $http.get("/proyecto2_bank_server/api/CuentaBancaria/" + $scope.params.idCuentaBancaria + "/MovimientoBancario").success(function(result) {
+            $scope.movimientosBancarios = result;
         });
-    }
+    };
 
 
 

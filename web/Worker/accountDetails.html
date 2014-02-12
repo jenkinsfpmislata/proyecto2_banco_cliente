@@ -19,7 +19,7 @@
             </span>
         </div>
         <div id="add">
-            <a class="btn btn-default btn-sm" href="#/BranchOffice/Add/{{entidadBancaria.idEntidadBancaria}}"><span class="glyphicon glyphicon-plus"></span> Add</a> 
+            <a class="btn btn-default btn-sm" href="#/Movements/Add"><span class="glyphicon glyphicon-plus"></span> Add</a> 
         </div>
     </div>
     <div class="panel panel-info">
@@ -27,16 +27,16 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <td>Activity type</td><td>Amounts</td><td>Date</td><td>Balance</td><td>Concept</td><td>Edit</td>
+                    <td>Movement type</td><td>Amounts</td><td>Date</td><td>Balance</td><td>Concept</td>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="movement in movimientosBancarios">
-                    <td>{{movement.tipoMovimientoBancario}}</td> 
-                    <td>{{movement.importe}}</td>
-                    <td>{{movement.fecha}}</td>
-                    <td>{{movement.saldoTotal}}</td>
-                    <td>{{movement.concepto}}</td>
+                <tr ng-repeat="movimientoBancario in movimientosBancarios">
+                    <td>{{movimientoBancario.tipoMovimientoBancario}}</td> 
+                    <td>{{movimientoBancario.importe}}</td>
+                    <td>{{movimientoBancario.fecha}}</td>
+                    <td>{{movimientoBancario.saldoTotal}}</td>
+                    <td>{{movimientoBancario.concepto}}</td>
 
 
                 </tr>
