@@ -25,7 +25,7 @@ app.config(function($routeProvider) {
                 templateUrl: "movements.html",
                 controller: "movementsSearchCtrl"
             });
-    $routeProvider.when("/Movements/Add",
+    $routeProvider.when("/Movements/Add/:idCuentaBancaria",
             {
                 templateUrl: "movementsForm.html",
                 controller: "movementsAddCtrl"
