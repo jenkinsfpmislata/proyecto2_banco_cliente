@@ -10,7 +10,7 @@ app.controller("AccountsCtrl",function($scope, $http, $routeParams){
             $scope.cuentasBancarias = result;
         });
     };
-     $scope.readAccountClient;
+     $scope.readAccountClient();
     
 });
 
