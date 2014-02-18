@@ -27,5 +27,10 @@ app.config(function($routeProvider) {
                 templateUrl: "Movements.html",
                 controller: "MovementsCtrl"
             });
+  $routeProvider.when("/Accounts/Details/:idCuentaBancaria",
+            {
+                templateUrl: "accountDetails.html",
+                controller: "accountDetailsCtrl"
+            });
 
 });

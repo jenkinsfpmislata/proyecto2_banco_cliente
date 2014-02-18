@@ -1,0 +1,51 @@
+<h4>Account Detail</h4>
+<div id="accountDetails">
+
+</div>
+<div id="containsTable">
+    <div id="details">
+        <div><span class="nombreDetalle">ID:</span> {{cuenta.idCuentaBancaria}}</div>
+        <div><span class="nombreDetalle">BRANCH OFFICE:</span> {{cuenta.sucursalBancaria.codigoSucursalBancaria }} - {{cuenta.sucursalBancaria.nombreSucursalBancaria}}</div>
+        <div><span class="nombreDetalle">ACCOUNT NUMBER:</span> {{cuenta.numeroCuenta}}</div>
+        <div><span class="nombreDetalle">DC:</span> {{cuenta.dc}}</div>
+        <div><span class="nombreDetalle">CTC:</span> {{cuenta.cif}}</div>
+        <div><span class="nombreDetalle">BALANCE:</span>{{cuenta.saldo}}</div>
+
+    </div>
+    <div id="addSearch">
+        <div id="search" class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="Search by name" ng-model="nombreSucursalBancaria">
+            <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="readSucursales()"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+        </div>
+        <div id="add">
+            <a class="btn btn-default btn-sm" href="#/Movements/Add/{{cuenta.idCuentaBancaria}}"><span class="glyphicon glyphicon-plus"></span> Add</a> 
+        </div>
+    </div>
+    <div class="panel panel-info">
+        <div id="cabeceraTabla" class="panel-heading">Movements</div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>Movement type</td><td>Amounts</td><td>Date</td><td>Balance</td><td>Concept</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="movimientoBancario in movimientosBancarios">
+                    <td>{{movimientoBancario.tipoMovimientoBancario}}</td> 
+                    <td>{{movimientoBancario.importe}}</td>
+                    <td>{{movimientoBancario.fecha}}</td>
+                    <td>{{movimientoBancario.saldoTotal}}</td>
+                    <td>{{movimientoBancario.concepto}}</td>
+
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div id="return">
+        <a class="btn btn-warning col-xs-5" href="#/Accounts">Return</a>
+    </div>
+</div>
