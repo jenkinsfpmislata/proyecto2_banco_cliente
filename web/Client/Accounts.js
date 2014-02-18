@@ -2,6 +2,7 @@ app.controller("AccountsCtrl",function($scope, $http, $routeParams){
     $scope.cuenta = null;
     $scope.cuentasBancarias = [];
     $scope.nombreCuentaBancaria = null;
+     $scope.params = $routeParams;
 
 
     $scope.readAccountClient = function() {
