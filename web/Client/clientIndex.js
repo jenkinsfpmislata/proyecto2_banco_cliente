@@ -7,7 +7,7 @@ app.config(function($routeProvider) {
                 controller: "mainCtrl"
             });
     
-    $routeProvider.when("/:idCliente/Accounts/",
+    $routeProvider.when("/Accounts/:idCliente",
             {
                 templateUrl: "Accounts.html",
                 controller: "AccountsCtrl"
