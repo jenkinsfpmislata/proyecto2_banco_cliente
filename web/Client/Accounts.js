@@ -6,6 +6,7 @@ app.controller("AccountsCtrl",function($scope, $http, $routeParams){
 
 
     $scope.readAccountClient = function() {
+        alert($scope.params.idCliente);
         $http.get("/proyecto2_bank_server/api/"+ $scope.params.idCliente +"/CuentaBancaria").success(function(result) {
             $scope.cuentasBancarias = result;
         });
