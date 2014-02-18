@@ -1,18 +1,24 @@
-<div id="containertables">
-    <table  class="table table-hover">
-        <thead id="tabledatos">
+<h4>Client Accounts</h4>
+
+<div id="containsTable">
+    <table class="table table-hover">
+        <thead>
             <tr>
-                <th><b>#</b></th><th><b>Office</b></th><th><b>AccountNumber</b></th><th><b>DC</b></th><th><b>Balance</b></th><th><b>CIF</b></th><th><b></b></th>
+                <td>#</td><td>Branch office</td><td>Account number</td><td>DC</td><td>Balance</td><td>CTC</td><td>Edit</td>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>001</td><td>7562</td><td>742777854138</td><td>79</td><td>590€</td><td>B2145224</td><td><a href="#/Movements"><input type="button" value="Ver" class="btn btn-info"></a></td>
-            </tr>   
-            <tr>
-                <td>002</td><td>7562</td><td>756212233274</td><td>79</td><td>1.250€</td><td>B2145224</td><td><a href="#/Movements"><input type="button" value="Ver" class="btn btn-info"></a></td>
-            </tr>
-
+           <tr ng-repeat="cuenta in cuentasBancarias">
+                <td><a href="#/Accounts/Details/{{cuenta.idCuentaBancaria}}">{{cuenta.idCuentaBancaria}}</a></td>
+                <td>{{cuenta.sucursalBancaria.codigoSucursalBancaria }} - {{cuenta.sucursalBancaria.nombreSucursalBancaria}}</td>
+                <td>{{cuenta.numeroCuenta}}</td>
+                <td>{{cuenta.dc}}</td>
+                <td>{{cuenta.saldo}}</td>
+                <td>{{cuenta.cif}}</td>
+                <td>
+                    <a type="button" class="btn btn-default btn-sm" href="#/Accounts/Edit/{{cuenta.idCuentaBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
+                    <button type="button" class="btn btn-default btn-sm" ng-click="deleteCuentasBancarias(cuenta.idCuentaBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
+                </td> 
            
         </tbody>
     </table>
