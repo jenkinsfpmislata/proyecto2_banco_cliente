@@ -4,7 +4,7 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <td>#</td><td>Branch office</td><td>Account number</td><td>DC</td><td>Balance</td><td>CTC</td><td>Edit</td>
+                <td>#</td><td>Branch office</td><td>Account number</td><td>DC</td><td>Balance</td><td>CTC</td>
             </tr>
         </thead>
         
@@ -16,10 +16,7 @@
                 <td>{{cuenta.dc}}</td>
                 <td>{{cuenta.saldo}}</td>
                 <td>{{cuenta.cif}}</td>
-                <td>
-                    <a type="button" class="btn btn-default btn-sm" href="#/Accounts/Edit/{{cuenta.idCuentaBancaria}}"><span class="glyphicon glyphicon-edit"></span></a> 
-                    <button type="button" class="btn btn-default btn-sm" ng-click="deleteCuentasBancarias(cuenta.idCuentaBancaria)"><span class="glyphicon glyphicon-trash"></span></button> 
-                </td> 
+                
            
         </tbody>
     </table>
