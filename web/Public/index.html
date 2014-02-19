@@ -25,6 +25,7 @@
         <script src="Accounts.js" type="text/javascript"></script>
         <script src="BranchOffice.js" type="text/javascript"></script>
         <script src="Movements.js" type="text/javascript"></script>
+         <script src="indexLogin.js" type="text/javascript"></script>
         
 
         <!-- Fin Imports -->
@@ -67,18 +68,18 @@
                                 <li data-toggle="collapse" data-target="#formClient" data-parent="#accordion">Clients</li>
                                 <li id="formClient" class="collapse">
                                     <div id="containsLogin">                         
-                                        <form role="form" action="../Client/clientIndex.html">
+                                        <form role="form" action="....">
                                             <div class="form-group">
                                                 <label for="emailLogin">Email</label>
                                                 <input type="email" class="form-control" id="emailLogin"
-                                                       placeholder="E-mail">
+                                                       placeholder="E-mail" ng-model="indexLogin">
                                             </div>
                                             <div class="form-group">
                                                 <label for="passLogin">Pass:</label>
                                                 <input type="password" class="form-control" id="passLogin" 
                                                        placeholder="Password">
                                             </div>
-                                            <button type="submit" class="btn btn-default">Enviar</button>
+                                            <button type="submit" class="btn btn-default" ng-click="logearse()">Enviar</button>
                                         </form>
                                     </div>
                                 </li>
