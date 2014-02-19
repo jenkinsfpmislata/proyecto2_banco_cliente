@@ -68,18 +68,18 @@
                                 <li data-toggle="collapse" data-target="#formClient" data-parent="#accordion">Clients</li>
                                 <li id="formClient" class="collapse">
                                     <div id="containsLogin">                         
-                                        <form role="form"  >
+                                        <form role="form" action="../Client/clientIndex.html">
                                             <div class="form-group">
                                                 <label for="emailLogin">Email</label>
                                                 <input type="email" class="form-control" id="emailLogin"
-                                                       placeholder="E-mail" ng-model="indexLogin">
+                                                       placeholder="E-mail">
                                             </div>
                                             <div class="form-group">
                                                 <label for="passLogin">Pass:</label>
                                                 <input type="password" class="form-control" id="passLogin" 
                                                        placeholder="Password">
                                             </div>
-                                            <button  class="btn btn-default" ng-click="logearse()">Enviar</button>
+                                            <button type="submit" class="btn btn-default">Enviar</button>
                                         </form>
                                     </div>
                                 </li>
