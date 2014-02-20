@@ -28,7 +28,7 @@ app.config(function($routeProvider) {
             });
             $routeProvider.when("/client",
             {
-                templateUrl: "../Client/",
+                templateUrl: "../Client/clientIndex.html",
                
             });
     $routeProvider.otherwise({
@@ -41,7 +41,7 @@ app.config(function($routeProvider) {
 
 });
 
-app.controller("loginCtrl",function($scope, $http){
+app.controller("loginCtrl",function($scope, $http, $location){
      
     $scope.credenciales = {};
     $scope.cliente= {};
