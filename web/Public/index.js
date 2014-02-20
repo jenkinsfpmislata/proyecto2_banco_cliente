@@ -49,11 +49,11 @@ app.controller("loginCtrl",function($scope, $http, $location){
             
             $scope.cliente= result;
             alert($scope.cliente.idCliente)
-            $location.path("../Client/clientIndex.html");
+            $location.path("../Client/");
               
         });
         
-        alert("funciona3");
+        
     };
   
     
