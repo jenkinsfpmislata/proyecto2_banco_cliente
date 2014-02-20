@@ -5,7 +5,7 @@ app.controller("mainCtrl",function($scope, $http){
     
  $scope.logearse = function() {
 alert("funciona");
-        $http.post("/proyecto2_bank_server/api/Login/", $scope.credenciales).success(function(result) {
+        $http.post("/proyecto2_bank_server/api/Login/", $scope.credenciales).success(function() {
             alert("funciona2");
         });
         $location.path("/../Client/clientIndex.html");
