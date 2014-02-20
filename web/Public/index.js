@@ -39,17 +39,20 @@ app.config(function($routeProvider) {
 app.controller("loginCtrl",function($scope, $http){
      
     $scope.credenciales = {};
+    $scope.cliente= {};
   
     
  $scope.logearse = function() {
 
-        $http.post("/proyecto2_bank_server/api/Login/", $scope.credenciales).success(function() {
+        $http.post("/proyecto2_bank_server/api/Login/", $scope.credenciales).success(function(result) {
             alert("funciona"); 
+            $scope.cliente= result;
+            alert($scope.cliente)
             $location.path("/../Client");
-             $location.path("/../../Client/clientIndex.html#/");
+            
         $location.path("/../../Client");
         
-            $location.path("/../Client/clientIndex.html#/");
+            
            
         });
         
