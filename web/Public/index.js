@@ -26,11 +26,7 @@ app.config(function($routeProvider) {
                 templateUrl: "Movements.html",
                 controller: "MovementsCtrl"
             });
-            $routeProvider.when("/client",
-            {
-                templateUrl: "../Client/clientIndex.html",
-               
-            });
+            
     $routeProvider.otherwise({
         redirectTo: "/"
     });
@@ -53,7 +49,7 @@ app.controller("loginCtrl",function($scope, $http, $location){
             
             $scope.cliente= result;
             alert($scope.cliente.idCliente)
-            $location.path("/client");
+            $location.path("../Client/clientIndex.html");
               
         });
         
