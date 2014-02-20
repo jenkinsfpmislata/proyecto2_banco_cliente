@@ -47,6 +47,7 @@ alert("funciona");
             alert("funciona2");
         });
         $location.path("/../Client/clientIndex.html");
+        alert("funciona3");
     };
   
     
