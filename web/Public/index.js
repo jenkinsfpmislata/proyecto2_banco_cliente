@@ -26,6 +26,11 @@ app.config(function($routeProvider) {
                 templateUrl: "Movements.html",
                 controller: "MovementsCtrl"
             });
+            $routeProvider.when("/client",
+            {
+                templateUrl: "../Client/",
+               
+            });
     $routeProvider.otherwise({
         redirectTo: "/"
     });
@@ -45,11 +50,11 @@ app.controller("loginCtrl",function($scope, $http){
  $scope.logearse = function() {
 
         $http.post("/proyecto2_bank_server/api/Login/", $scope.credenciales).success(function(result) {
-            alert("funciona"); 
+            
             $scope.cliente= result;
             alert($scope.cliente.idCliente)
-            $location.path("../Client");
-             
+            $location.path("/client");
+              
         });
         
         alert("funciona3");
