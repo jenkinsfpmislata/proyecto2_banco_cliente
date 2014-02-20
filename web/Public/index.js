@@ -47,7 +47,7 @@ app.controller("loginCtrl",function($scope, $http){
         $http.post("/proyecto2_bank_server/api/Login/", $scope.credenciales).success(function(result) {
             alert("funciona"); 
             $scope.cliente= result;
-            alert($scope.cliente)
+            alert($scope.cliente.idCliente)
             $location.path("/../Client");
             
         $location.path("/../../Client");
