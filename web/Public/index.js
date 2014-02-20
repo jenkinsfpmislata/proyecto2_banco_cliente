@@ -48,7 +48,7 @@ app.controller("loginCtrl",function($scope, $http){
             alert("funciona"); 
             $scope.cliente= result;
             alert($scope.cliente.idCliente)
-            $location.path("../Client/clientIndex.html");
+            $location.path("../Client");
              
         });
         
