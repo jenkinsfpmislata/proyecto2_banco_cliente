@@ -1,17 +1,6 @@
-app.controller("mainCtrl",function($scope, $http){
+app.controller("mainCtrl",function(){
      
-    $scope.credenciales = {};
   
-    
- $scope.logearse = function() {
-alert("funciona");
-        $http.post("/proyecto2_bank_server/api/Login/", $scope.credenciales).success(function() {
-            alert("funciona2");
-        });
-        $location.path("/../Client/clientIndex.html");
-    };
-  
-    
 
 });
     
