@@ -34,3 +34,16 @@ app.config(function($routeProvider) {
             });
 
 });
+
+app.controller("indexCtrl",function($scope, $http, $location){
+
+$scope.cliente={};
+     
+     $scope.readClient=function(){
+         $http.get("/proyecto2_bank_server/api/Login").success(function(result) {
+         $scope.cliente = result;
+     })
+     }
+     $scope.readClient();
+     
+});

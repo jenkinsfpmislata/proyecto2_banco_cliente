@@ -31,7 +31,7 @@
         <!-- Fin Imports -->
 
     </head>
-    <body>
+    <body ng-controller="indexCtrl">
         <div id="topbar">
             <div id="logotopbar"></div>
             <div id="menutopbar">
@@ -62,11 +62,11 @@
                     <div class="menu-left">
                         <h5>CLIENTS</h5>
                         <div id="containsLeft">                         
-                            Name: Juanito
+                            Name: {{cliente.nombreCliente}}
                             <br>
-                            Surname:Tergal Martinez
+                            Surname:  {{cliente.apellidoCliente}}
                             <br>
-                            DNI:B2145224
+                            DNI:  {{cliente.dni}}
                         </div>
 
                     </div>
