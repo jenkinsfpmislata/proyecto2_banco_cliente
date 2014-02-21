@@ -11,10 +11,11 @@ app.controller("AccountsCtrl",function($scope, $http, $routeParams){
          $scope.cliente = result;
      })
      }
+     $scope.readClient();
 
     $scope.readAccountClient = function() {
         
-        $http.get("/proyecto2_bank_server/api/"+ $scope.params.idCliente +"/CuentaBancaria").success(function(result) {
+        $http.get("/proyecto2_bank_server/api/"+  $scope.cliente.idCliente +"/CuentaBancaria").success(function(result) {
             $scope.cuentasBancarias = result;
         });
     };
