@@ -9,7 +9,7 @@ app.controller("AccountsCtrl",function($scope, $http, $routeParams){
      $scope.readClient=function(){
          $http.get("/proyecto2_bank_server/api/Login").success(function(result) {
          $scope.cliente = result;
-       alert($scope.cliente.idCliente);
+      
      })
      }
      $scope.readClient();
@@ -18,6 +18,7 @@ app.controller("AccountsCtrl",function($scope, $http, $routeParams){
         
         $http.get("/proyecto2_bank_server/api/"+ $scope.cliente.idCliente +"/CuentaBancaria").success(function(result) {
             $scope.cuentasBancarias = result;
+             alert($scope.cliente.idCliente);
         });
     };
      $scope.readAccountClient();
