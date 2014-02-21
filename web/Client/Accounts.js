@@ -3,7 +3,14 @@ app.controller("AccountsCtrl",function($scope, $http, $routeParams){
     $scope.cuentasBancarias = [];
     $scope.nombreCuentaBancaria = null;
      $scope.params = $routeParams;
-
+     
+     $scope.cliente={};
+     
+     $scope.readClient=function(){
+         $http.get("/proyecto2_bank_server/api/Login").success(function(result) {
+         $scope.cliente = result;
+     })
+     }
 
     $scope.readAccountClient = function() {
         
