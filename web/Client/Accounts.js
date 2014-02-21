@@ -23,7 +23,7 @@ app.controller("AccountsCtrl",function($scope, $http, $routeParams){
             
         });
     };
-    
+     $scope.readClient();
     
 });
 
