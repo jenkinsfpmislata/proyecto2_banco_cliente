@@ -46,4 +46,17 @@ $scope.cliente={};
      }
      $scope.readClient();
      
+     
+     
+
+      $scope.salir = function() {
+        $http.delete("/proyecto2_bank_server/api/Login/").success(function() {
+            $scope.readClient();
+            alert($scope.cliente.idCliente);
+            $location.path("../Public/");
+              
+        });
+        
+        
+    };
 });

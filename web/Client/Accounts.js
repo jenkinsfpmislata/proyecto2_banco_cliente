@@ -9,18 +9,22 @@ app.controller("AccountsCtrl",function($scope, $http, $routeParams){
      $scope.readClient=function(){
          $http.get("/proyecto2_bank_server/api/Login").success(function(result) {
          $scope.cliente = result;
-       alert($scope.cliente.idCliente);
+      
+        $scope.readAccountClient();
      })
      }
-     $scope.readClient();
+    
 
     $scope.readAccountClient = function() {
-        
+         
+        // alert($scope.cliente.idCliente);
         $http.get("/proyecto2_bank_server/api/"+ $scope.cliente.idCliente +"/CuentaBancaria").success(function(result) {
             $scope.cuentasBancarias = result;
+            
         });
     };
-     $scope.readAccountClient();
+    
+     $scope.readClient();
     
 });
 
